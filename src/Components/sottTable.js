@@ -31,7 +31,7 @@ class SottTable extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/sottlab/')
+        axios.get('mongodb+srv://dbCorey:MVDhmYhNQkp2y8T@cluster0-ymebw.mongodb.net/sottlab?retryWrites=true&w=majority')
         .then((response) => {this.setState({sottlab: response.data})
      }) 
          .catch(error => {
