@@ -31,3 +31,8 @@
     transform: rotate(360deg);
   }
 }
+
+body .MUIDataTable-responsiveScroll-851 {
+  max-height: 100% !important;
+}
+
