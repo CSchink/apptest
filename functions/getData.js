@@ -1,6 +1,6 @@
 var co = require('co');
 var mongoose = require('mongoose');
-const dotenv = require('dotenv').config
+const dotenv = require('dotenv').config()
 
 let conn = null;
 
