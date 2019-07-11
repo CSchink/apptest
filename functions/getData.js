@@ -1,10 +1,10 @@
+const dotenv = require('dotenv').config()
 var co = require('co');
 var mongoose = require('mongoose');
-const dotenv = require('dotenv').config()
 
 let conn = null;
 
-const dbUrl = 'mongodb+srv://dbCorey:MVDhmYhNQkp2y8T@cluster0-ymebw.mongodb.net/sottlab?retryWrites=true&w=majority'
+const dbUrl = process.env.DB_URL
 
 exports.handler = function(event, context, callback) {
 
