@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDom from 'react';
 import axios from 'axios';
 import MUIDataTable from "mui-datatables";
-// import db from './lambda/server.js'
+// import db from '../../server'
 
 import {
     createMuiTheme,
@@ -33,7 +33,7 @@ class SottTable extends Component {
     }
 
     componentDidMount() {
-        axios.get('/.netlify/functions/sottLabRead')
+        axios.get('/.netlify/functions/getData')
         .then((response) => {this.setState({sottlab: response.data})
         console.log(response.data)
      }) 
