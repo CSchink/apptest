@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 let conn = null;
 
-const dbUrl = process.env.DB_URL
+const dbUrl = 'mongodb+srv://dbCorey:MVDhmYhNQkp2y8T@cluster0-ymebw.mongodb.net/sottlab?retryWrites=true&w=majority'
 
 exports.handler = function(event, context, callback) {
 
@@ -25,63 +25,62 @@ function run() {
         bufferCommands: false,
         bufferMaxEntries: 0
       });
-      conn.model('sottlab');
+      conn.model('sottlab', mongoose.Schema({
+        date: {
+      Type:Date
+  },
+  entry: {
+      Type:String
+  },
+  century: {
+      Type:String
+  },
+  force: {
+      Type:String
+  },
+  primary: {
+      Type:String
+  },
+  entity: {
+      Type:String
+  },
+  role: {
+      Type:String
+  },
+  originating: {
+      Type:String
+  },
+  regiona: {
+      Type:String
+  },
+  target: {
+      Type:String
+  },
+  city: {
+      Type:String
+  },
+  regionb: {
+      Type:String
+  },
+  sottcategory: {
+      Type: String
+  },
+  numbers: {
+      Type: Number
+  },
+  numberstype: {
+      Type: String
+  },
+  source: {
+      Type: String
+  },
+  page: {
+      Type: String
+  }, 
+  },  ));
     }
 
-    const M = conn.model('sottlab', mongoose.Schema({
-      date: {
-    Type:Date
-},
-entry: {
-    Type:String
-},
-century: {
-    Type:String
-},
-force: {
-    Type:String
-},
-primary: {
-    Type:String
-},
-entity: {
-    Type:String
-},
-role: {
-    Type:String
-},
-originating: {
-    Type:String
-},
-regiona: {
-    Type:String
-},
-target: {
-    Type:String
-},
-city: {
-    Type:String
-},
-regionb: {
-    Type:String
-},
-sottcategory: {
-    Type: String
-},
-numbers: {
-    Type: Number
-},
-numberstype: {
-    Type: String
-},
-source: {
-    Type: String
-},
-page: {
-    Type: String
-}, 
-},  
-));
+    const M = conn.model('sottlab');
 
     const doc = yield M.find();
     const response = {
