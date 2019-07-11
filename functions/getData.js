@@ -80,7 +80,7 @@ source: {
 page: {
     Type: String
 }, 
-}, { collection : 'sottlab' } 
+},  
 ));
 
     const doc = yield M.find();
