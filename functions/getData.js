@@ -92,4 +92,4 @@ page: {
   });
 }
 
-module.exports = mongoose.model('sottlab', sottlab);          
+module.exports = mongoose.model('sottlab');          
