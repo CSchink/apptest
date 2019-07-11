@@ -29,58 +29,58 @@ function run() {
     }
 
     const M = conn.model('sottlab', mongoose.Schema({
-      date: {
-    Type:Date
-},
-entry: {
-    Type:String
-},
-century: {
-    Type:String
-},
-force: {
-    Type:String
-},
-primary: {
-    Type:String
-},
-entity: {
-    Type:String
-},
-role: {
-    Type:String
-},
-originating: {
-    Type:String
-},
-regiona: {
-    Type:String
-},
-target: {
-    Type:String
-},
-city: {
-    Type:String
-},
-regionb: {
-    Type:String
-},
-sottcategory: {
-    Type: String
-},
-numbers: {
-    Type: Number
-},
-numberstype: {
-    Type: String
-},
-source: {
-    Type: String
-},
-page: {
-    Type: String
-}, 
-}, { collection : 'sottlab' } 
+//       date: {
+//     Type:Date
+// },
+// entry: {
+//     Type:String
+// },
+// century: {
+//     Type:String
+// },
+// force: {
+//     Type:String
+// },
+// primary: {
+//     Type:String
+// },
+// entity: {
+//     Type:String
+// },
+// role: {
+//     Type:String
+// },
+// originating: {
+//     Type:String
+// },
+// regiona: {
+//     Type:String
+// },
+// target: {
+//     Type:String
+// },
+// city: {
+//     Type:String
+// },
+// regionb: {
+//     Type:String
+// },
+// sottcategory: {
+//     Type: String
+// },
+// numbers: {
+//     Type: Number
+// },
+// numberstype: {
+//     Type: String
+// },
+// source: {
+//     Type: String
+// },
+// page: {
+//     Type: String
+// }, 
+// }, { collection : 'sottlab' } 
 ));
 
     const doc = yield M.find();
