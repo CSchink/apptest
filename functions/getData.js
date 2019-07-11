@@ -1,10 +1,10 @@
-const dotenv = require('dotenv').config()
+const dotenv = require('dotenv').config({path: 'C:\Users\corey\sottlab3\src\.env'})
 var co = require('co');
 var mongoose = require('mongoose');
 
 let conn = null;
 
-const dbUrl = 'mongodb+srv://dbCorey:MVDhmYhNQkp2y8T@cluster0-ymebw.mongodb.net/sottlab?retryWrites=true&w=majority'
+const dbUrl = process.env.DB_URL
 
 exports.handler = function(event, context, callback) {
 
@@ -80,8 +80,8 @@ source: {
 page: {
     Type: String
 }, 
-}, { collection : 'sottlab' 
-    }));
+}, { collection : 'sottlab' } 
+));
 
     const doc = yield M.find();
     const response = {
