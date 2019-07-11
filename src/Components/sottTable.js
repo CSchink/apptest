@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import ReactDom from 'react';
 import axios from 'axios';
 import MUIDataTable from "mui-datatables";
-// import db from '../../server'
 
 import {
     createMuiTheme,
