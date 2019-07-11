@@ -43,13 +43,18 @@ class SottTable extends Component {
       
     render() {
         
-        var options = {
+        const options = {
             filterType: 'multiselect',
             selectableRows: 'none',
             responsive: 'scroll',
             rowsPerPage: 10,
             rowsPerPageOptions: [10,25,50,100],
+            customSort: (data, colIndex, order) => {
+                return data.sort((a, b) => {
+                  return (a.data[colIndex].length < b.data[colIndex].length ? -1: 1 ) * (order === 'desc' ? 1 : -1);
+                });
         }
+    }
         var columns = [ 
             {
                 name:"date",
@@ -177,82 +182,3 @@ class SottTable extends Component {
 }
 
 export default SottTable;
-
-// {
-            //     label: 'Line of Force',
-            //     field: 'lineofforce',
-            //     sort: 'asc',
-            //     width: 100
-            // },
-            // {
-            //     label: 'Primary Entity',
-            //     field: 'primaryentity',
-            //     sort: 'asc',
-            //     width: 150
-            // },
-            // {
-            //     label: 'Role Played For',
-            //     field: 'roleplayedfor',
-            //     sort: 'asc',
-            //     width: 100
-            // },
-            // {
-            //     label: 'Country of Origin',
-            //     field: 'countryoforigin',
-            //     sort: 'asc',
-            //     width: 150
-            // },
-            // {
-            //     label: 'Region A',
-            //     field: 'regiona',
-            //     sort: 'asc',
-            //     width: 150
-            // },
-            // {
-            //     label: 'Target Country',
-            //     field: 'targetcountry',
-            //     sort: 'asc',
-            //     width: 150
-            // },
-            // {
-            //     label: 'City',
-            //     field: 'city',
-            //     sort: 'asc',
-            //     width: 150
-            // },
-            // {
-            //     label: 'Region B',
-            //     field: 'regionb',
-            //     sort: 'asc',
-            //     width: 150
-            // },
-            // {
-            //     label: 'Sott Category',
-            //     field: 'sottcategory',
-            //     sort: 'asc',
-            //     width: 150
-            // },
-            // {
-            //     label: 'Numbers',
-            //     field: 'numbers',
-            //     sort: 'asc',
-            //     width: 150
-            // },
-            // {
-            //     label: 'Numbers Type',
-            //     field: 'numberstype',
-            //     sort: 'asc',
-            //     width: 150
-            // },
-            // {
-            //     label: 'Source',
-            //     field: 'source',
-            //     sort: 'asc',
-            //     width: 150
-            // },
-            // {
-            //     label: 'Page',
-            //     field: 'page',
-            //     sort: 'asc',
-            //     width: 150
-            // }
