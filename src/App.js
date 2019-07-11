@@ -8,17 +8,7 @@ import "mdbreact/dist/css/mdb.css";
 import SottDashBoard from './Components/sottdashboards';
 import JumbotronPage from './Components/jumbotron';
 import SottTable from './Components/sottTable';
-const mongoose = require('mongoose');
-const dotenv = require('dotenv')
-dotenv.config();
 
-mongoose
-    .connect('mongodb+srv://dbCorey:MVDhmYhNQkp2y8T@cluster0-ymebw.mongodb.net/sottlab?retryWrites=true&w=majority', { useNewUrlParser: true}, { useMongoClient: true})
-    .then(()=> console.log("MongoDB database connection established successfully"))
-const connection = mongoose.connection;
-connection.once('open', function() {
-    console.log("MongoDB database connection established successfully");
-});
 
 class App extends Component {
   render() { 
