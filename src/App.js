@@ -35,6 +35,9 @@ class App extends Component {
                 <li className="navbar-item">
                   <Link to="/dashboards" className="nav-link">Dashboards</Link>
                 </li>
+                <li className="navbar-item">
+                  <Link to="/input" className="nav-link">Input</Link>
+                </li>
               </ul>
             </div>
           </nav>
