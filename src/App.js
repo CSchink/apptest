@@ -8,7 +8,7 @@ import "mdbreact/dist/css/mdb.css";
 import SottDashBoard from './Components/sottdashboards';
 import JumbotronPage from './Components/jumbotron';
 import SottTable from './Components/sottTable';
-import inputPage from './Components/inputPage';
+import InputPage from './Components/inputPage';
 
 class App extends Component {
   render() { 
