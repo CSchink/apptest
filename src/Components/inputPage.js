@@ -1,4 +1,5 @@
-import React, {Fragment} from 'react';
+import React from 'react';
+import {MDBContainer} from 'mdbreact';
 
 class InputPage extends React.Component {
     state={
@@ -21,8 +22,9 @@ class InputPage extends React.Component {
 
     render() {
         return (
-            <Fragment>
+            <MDBContainer>
             <div className="form-group">
+                <label htmlFor="exampleInput">Your e-mail</label>
                 <input type="text"
                 name='date'
                 placeholder='date' 
@@ -90,6 +92,7 @@ class InputPage extends React.Component {
                 name='source'
                 placeholder='source' 
                 value={this.state.date} 
+                className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
             </div>
@@ -102,7 +105,7 @@ class InputPage extends React.Component {
                 onChange={e => this.change(e)}
             />
             </div>
-            </Fragment>
+            </MDBContainer>
         )
     }
 }
