@@ -39,7 +39,6 @@ class InputPage extends React.Component {
                 onChange={e => this.change(e)}
                 type="textarea" 
                 />
-            <div className="form-group"> 
             <MDBInputGroup containerClassName="mb-3" hint="Century"
             type="text"
                 name='century'
@@ -48,8 +47,6 @@ class InputPage extends React.Component {
                 className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
-            </div>
-            <div className="form-group">
             <MDBInputGroup containerClassName="mb-3" hint="Event"
             type="text"    
                 name='event'
@@ -58,8 +55,8 @@ class InputPage extends React.Component {
                 className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
-            </div>
-            <div className="form-group">
+            
+            
             <MDBInputGroup containerClassName="mb-3" hint="Category"
             type="text"    
                 name='category'
@@ -68,8 +65,8 @@ class InputPage extends React.Component {
                 className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
-            </div>
-            <div className="form-group">
+            
+            
             <MDBInputGroup containerClassName="mb-3" hint="Originating"
             type="text"    
                 name='originating'
@@ -78,8 +75,7 @@ class InputPage extends React.Component {
                 className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
-            </div>
-            <div className="form-group">
+            
             <MDBInputGroup containerClassName="mb-3" hint="Target"
                 type="text"    
                 name='target'
@@ -88,18 +84,14 @@ class InputPage extends React.Component {
                 className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
-            </div>
-            <div className="form-group">
             <MDBInputGroup containerClassName="mb-3" hint="Source"
-            type="text"    
+                type="text"    
                 name='source'
                 placeholder='source' 
                 value={this.state.date} 
                 className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
-            </div>
-            <div className="form-group">
             <MDBInputGroup containerClassName="mb-3" hint="Page"
                 type="text"    
                 name='page'
@@ -108,7 +100,6 @@ class InputPage extends React.Component {
                 className="form-control form-control-md"
                 onChange={e => this.change(e)}
             />
-            </div>
             <MDBBtn color="primary">Enter</MDBBtn>
             </MDBContainer>
         )
