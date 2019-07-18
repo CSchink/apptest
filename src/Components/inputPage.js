@@ -1,5 +1,5 @@
 import React from 'react';
-import {MDBContainer} from 'mdbreact';
+import {MDBContainer, MDBBtn } from 'mdbreact';
 
 class InputPage extends React.Component {
     state={
@@ -24,7 +24,7 @@ class InputPage extends React.Component {
         return (
             <MDBContainer>
             <div className="form-group">
-                <label htmlFor="exampleInput">Your e-mail</label>
+                <label htmlFor="exampleInput">Date</label>
                 <input type="text"
                 name='date'
                 placeholder='date' 
@@ -34,6 +34,7 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group">
+            <label htmlFor="exampleInput">Entry</label>
             <input type="text"
                 name='entry'
                 placeholder='entry' 
@@ -43,6 +44,7 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group"> 
+            <label htmlFor="exampleInput">Century</label>
             <input type="text"
                 name='century'
                 placeholder='century' 
@@ -52,6 +54,7 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group">
+            <label htmlFor="exampleInput">Event</label>
             <input type="text"    
                 name='event'
                 placeholder='event' 
@@ -61,6 +64,7 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group">
+            <label htmlFor="exampleInput">SOTT Category</label>
             <input type="text"    
                 name='category'
                 placeholder='category' 
@@ -70,6 +74,7 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group">
+            <label htmlFor="exampleInput">Originating</label>
             <input type="text"    
                 name='originating'
                 placeholder='originating' 
@@ -79,6 +84,7 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group">
+            <label htmlFor="exampleInput">Target</label>
             <input type="text"    
                 name='target'
                 placeholder='target' 
@@ -88,6 +94,7 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group">
+            <label htmlFor="exampleInput">Source</label>
             <input type="text"    
                 name='source'
                 placeholder='source' 
@@ -97,6 +104,7 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group">
+            <label htmlFor="exampleInput">Page</label>
             <input type="text"    
                 name='page'
                 placeholder='page' 
@@ -105,6 +113,7 @@ class InputPage extends React.Component {
                 onChange={e => this.change(e)}
             />
             </div>
+            <MDBBtn color="primary">Enter</MDBBtn>
             </MDBContainer>
         )
     }
