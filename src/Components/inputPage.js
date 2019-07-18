@@ -1,5 +1,5 @@
 import React from 'react';
-import {MDBContainer, MDBBtn } from 'mdbreact';
+import {MDBContainer, MDBBtn, MDBInputGroup } from 'mdbreact';
 
 class InputPage extends React.Component {
     state={
@@ -23,29 +23,25 @@ class InputPage extends React.Component {
     render() {
         return (
             <MDBContainer>
-            <div className="form-group">
-                <label htmlFor="exampleInput">Date</label>
-                <input type="text"
+            <MDBInputGroup containerClassName="mb-3" hint="Username" 
                 name='date'
                 placeholder='date' 
                 value={this.state.date} 
                 className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
-            </div>
-            <div className="form-group">
-            <label htmlFor="exampleInput">Entry</label>
-            <input type="text"
+            <MDBInputGroup containerClassName="mb-3" hint="Entry"
+                type="text"
                 name='entry'
                 placeholder='entry' 
                 value={this.state.entry} 
-                className="form-control form-control-md"
+                className="form-control form-control-lg"
                 onChange={e => this.change(e)}
+                type="textarea" 
                 />
-            </div>
             <div className="form-group"> 
-            <label htmlFor="exampleInput">Century</label>
-            <input type="text"
+            <MDBInputGroup containerClassName="mb-3" hint="Century"
+            type="text"
                 name='century'
                 placeholder='century' 
                 value={this.state.date} 
@@ -54,8 +50,8 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group">
-            <label htmlFor="exampleInput">Event</label>
-            <input type="text"    
+            <MDBInputGroup containerClassName="mb-3" hint="Event"
+            type="text"    
                 name='event'
                 placeholder='event' 
                 value={this.state.date} 
@@ -64,8 +60,8 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group">
-            <label htmlFor="exampleInput">SOTT Category</label>
-            <input type="text"    
+            <MDBInputGroup containerClassName="mb-3" hint="Category"
+            type="text"    
                 name='category'
                 placeholder='category' 
                 value={this.state.date} 
@@ -74,8 +70,8 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group">
-            <label htmlFor="exampleInput">Originating</label>
-            <input type="text"    
+            <MDBInputGroup containerClassName="mb-3" hint="Originating"
+            type="text"    
                 name='originating'
                 placeholder='originating' 
                 value={this.state.date} 
@@ -84,8 +80,8 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group">
-            <label htmlFor="exampleInput">Target</label>
-            <input type="text"    
+            <MDBInputGroup containerClassName="mb-3" hint="Target"
+                type="text"    
                 name='target'
                 placeholder='target' 
                 value={this.state.date} 
@@ -94,8 +90,8 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group">
-            <label htmlFor="exampleInput">Source</label>
-            <input type="text"    
+            <MDBInputGroup containerClassName="mb-3" hint="Source"
+            type="text"    
                 name='source'
                 placeholder='source' 
                 value={this.state.date} 
@@ -104,8 +100,8 @@ class InputPage extends React.Component {
                 />
             </div>
             <div className="form-group">
-            <label htmlFor="exampleInput">Page</label>
-            <input type="text"    
+            <MDBInputGroup containerClassName="mb-3" hint="Page"
+                type="text"    
                 name='page'
                 placeholder='page' 
                 value={this.state.date} 
