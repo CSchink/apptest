@@ -27,6 +27,7 @@ class InputPage extends React.Component {
                 name='date'
                 placeholder='date' 
                 value={this.state.date} 
+                className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
             </div>
@@ -35,6 +36,7 @@ class InputPage extends React.Component {
                 name='entry'
                 placeholder='entry' 
                 value={this.state.entry} 
+                className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
             </div>
@@ -43,6 +45,7 @@ class InputPage extends React.Component {
                 name='century'
                 placeholder='century' 
                 value={this.state.date} 
+                className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
             </div>
@@ -51,6 +54,7 @@ class InputPage extends React.Component {
                 name='event'
                 placeholder='event' 
                 value={this.state.date} 
+                className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
             </div>
@@ -59,6 +63,7 @@ class InputPage extends React.Component {
                 name='category'
                 placeholder='category' 
                 value={this.state.date} 
+                className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
             </div>
@@ -67,6 +72,7 @@ class InputPage extends React.Component {
                 name='originating'
                 placeholder='originating' 
                 value={this.state.date} 
+                className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
             </div>
@@ -75,6 +81,7 @@ class InputPage extends React.Component {
                 name='target'
                 placeholder='target' 
                 value={this.state.date} 
+                className="form-control form-control-md"
                 onChange={e => this.change(e)}
                 />
             </div>
@@ -91,6 +98,7 @@ class InputPage extends React.Component {
                 name='page'
                 placeholder='page' 
                 value={this.state.date} 
+                className="form-control form-control-md"
                 onChange={e => this.change(e)}
             />
             </div>
