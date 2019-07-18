@@ -1,4 +1,6 @@
 import React from 'react';
+import TextField from 'material-ui/Textfield';
+import RaisedButton from "material-ui/RaisedButton";
 
 class InputPage extends React.Component {
     state={
@@ -20,53 +22,63 @@ class InputPage extends React.Component {
     }
 
     render() {
-        return(
+        return (
             <form>
-                <input 
+                <TextField 
                 name='date'
                 placeholder='date' 
                 value={this.state.date} 
-                onChange={e => this.change(e)}></input>
-                  <input 
+                onChange={e => this.change(e)}
+                />
+                <TextField
                 name='entry'
                 placeholder='entry' 
                 value={this.state.entry} 
-                onChange={e => this.change(e)}></input>
-                   <input 
+                onChange={e => this.change(e)}
+                />
+                <TextField 
                 name='century'
                 placeholder='century' 
                 value={this.state.date} 
-                onChange={e => this.change(e)}></input>
-                   <input 
+                onChange={e => this.change(e)}
+                />
+                <TextField 
                 name='event'
                 placeholder='event' 
                 value={this.state.date} 
-                onChange={e => this.change(e)}></input>
-                   <input 
+                onChange={e => this.change(e)}
+                />
+                 <TextField 
                 name='category'
                 placeholder='category' 
                 value={this.state.date} 
-                onChange={e => this.change(e)}></input>
-                  <input 
+                onChange={e => this.change(e)}
+                />
+                <TextField 
                 name='originating'
                 placeholder='originating' 
                 value={this.state.date} 
-                onChange={e => this.change(e)}></input>
-                  <input 
+                onChange={e => this.change(e)}
+                />
+                <TextField 
                 name='target'
                 placeholder='target' 
                 value={this.state.date} 
-                onChange={e => this.change(e)}></input>
-                  <input 
+                onChange={e => this.change(e)}
+                />
+                <TextField 
                 name='source'
                 placeholder='source' 
                 value={this.state.date} 
-                onChange={e => this.change(e)}></input>
-                  <input 
+                onChange={e => this.change(e)}
+                />
+                <TextField 
                 name='page'
                 placeholder='page' 
                 value={this.state.date} 
-                onChange={e => this.change(e)}></input>
+                onChange={e => this.change(e)}
+                />
+                 <RaisedButton label="Submit"/>
             </form>
         )
     }
