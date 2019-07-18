@@ -1,6 +1,4 @@
-import React from 'react';
-import TextField from "material-ui/TextField";
-import RaisedButton from "material-ui/RaisedButton";
+import React, {Fragment} from 'react';
 
 class InputPage extends React.Component {
     state={
@@ -23,63 +21,80 @@ class InputPage extends React.Component {
 
     render() {
         return (
-            <form>
-                <TextField 
+            <Fragment>
+            <div className="form-group">
+                <input type="text"
                 name='date'
                 placeholder='date' 
                 value={this.state.date} 
                 onChange={e => this.change(e)}
                 />
-                <TextField
+            </div>
+            <div className="form-group">
+            <input type="text"
                 name='entry'
                 placeholder='entry' 
                 value={this.state.entry} 
                 onChange={e => this.change(e)}
                 />
-                <TextField 
+            </div>
+            <div className="form-group"> 
+            <input type="text"
                 name='century'
                 placeholder='century' 
                 value={this.state.date} 
                 onChange={e => this.change(e)}
                 />
-                <TextField 
+            </div>
+            <div className="form-group">
+            <input type="text"    
                 name='event'
                 placeholder='event' 
                 value={this.state.date} 
                 onChange={e => this.change(e)}
                 />
-                 <TextField 
+            </div>
+            <div className="form-group">
+            <input type="text"    
                 name='category'
                 placeholder='category' 
                 value={this.state.date} 
                 onChange={e => this.change(e)}
                 />
-                <TextField 
+            </div>
+            <div className="form-group">
+            <input type="text"    
                 name='originating'
                 placeholder='originating' 
                 value={this.state.date} 
                 onChange={e => this.change(e)}
                 />
-                <TextField 
+            </div>
+            <div className="form-group">
+            <input type="text"    
                 name='target'
                 placeholder='target' 
                 value={this.state.date} 
                 onChange={e => this.change(e)}
                 />
-                <TextField 
+            </div>
+            <div className="form-group">
+            <input type="text"    
                 name='source'
                 placeholder='source' 
                 value={this.state.date} 
                 onChange={e => this.change(e)}
                 />
-                <TextField 
+            </div>
+            <div className="form-group">
+            <input type="text"    
                 name='page'
                 placeholder='page' 
                 value={this.state.date} 
                 onChange={e => this.change(e)}
-                />
-                 <RaisedButton label="Submit"/>
-            </form>
+            />
+            </div>
+            </Fragment>
         )
     }
 }
