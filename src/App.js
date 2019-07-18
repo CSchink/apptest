@@ -8,7 +8,7 @@ import "mdbreact/dist/css/mdb.css";
 import SottDashBoard from './Components/sottdashboards';
 import JumbotronPage from './Components/jumbotron';
 import SottTable from './Components/sottTable';
-
+import inputPage from './Components/inputPage';
 
 class App extends Component {
   render() { 
@@ -40,7 +40,7 @@ class App extends Component {
           </nav>
       <JumbotronPage />
       <Route path ="/dashboards" component ={SottDashBoard} />
-      
+      <Route path="/input" component={InputPage} />
       <Route path="/" exact component ={SottTable} />
       
     </div>
