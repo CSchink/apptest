@@ -32,7 +32,7 @@ class App extends Component {
             <div className="collpase nav-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                  <Link to="/sottlab" className="nav-link">Home</Link>
+                  <Link to="/" className="nav-link">Login</Link>
                 </li>
                 <li className="navbar-item">
                   <Link to="/dashboards" className="nav-link">Dashboards</Link>
