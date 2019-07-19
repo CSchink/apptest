@@ -27,7 +27,7 @@ class App extends Component {
        </button>
       </nav> */}
 
-      {/* <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <a className="navbar-brand" href="https://www.sott.net/" target="_blank">
                           </a>
             <Link to="/" className="navbar-brand">SOTT Lab</Link>
@@ -44,8 +44,7 @@ class App extends Component {
                 </li>
               </ul>
             </div>
-          </nav> */}
-          <NavBar/>
+          </nav>
       <JumbotronPage />
       <Route path ="/dashboards" component ={SottDashBoard} />
       <Route path="/input" component={InputPage} />
