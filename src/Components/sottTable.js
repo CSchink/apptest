@@ -49,11 +49,11 @@ class SottTable extends Component {
             responsive: 'scroll',
             rowsPerPage: 10,
             rowsPerPageOptions: [10,25,50,100],
-            customSort: (data, colIndex, order) => {
-                return data.sort((a, b) => {
-                  return (a.data[colIndex].length < b.data[colIndex].length ? -1: 1 ) * (order === 'desc' ? 1 : -1);
-                });
-        }
+        //     customSort: (data, colIndex, order) => {
+        //         return data.sort((a, b) => {
+        //           return (a.data[colIndex].length < b.data[colIndex].length ? -1: 1 ) * (order === 'desc' ? 1 : -1);
+        //         });
+        // }
     }
         var columns = [ 
             {
