@@ -27,7 +27,7 @@ class InputPage extends React.Component {
                 <label htmlFor="exampleInput">Date</label>
                 <input type="text"
                 name='date'
-                placeholder='date' 
+                // placeholder='date' 
                 value={this.state.date} 
                 className="form-control form-control-md"
                 onChange={e => this.change(e)}
