@@ -50,6 +50,7 @@ class SottTable extends Component {
             rowsPerPage: 100,
             download: false,
             rowsPerPageOptions: [10,25,50,100],
+            expandableRows: true,
             expandableRowsOnClick: true,
             // customSort: (data, colIndex, order) => { return data.sort((a, b) => { if (colIndex === 1) { return (new Date(a.data[colIndex]) < new Date(b.data[colIndex]) ? -1: 1 ) * (order === 'desc' ? 1 : -1); } else { return (a.data[colIndex] < b.data[colIndex] ? -1: 1 ) * (order === 'desc' ? 1 : -1); } }); }
     }
