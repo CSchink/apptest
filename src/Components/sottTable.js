@@ -44,17 +44,17 @@ class SottTable extends Component {
     render() {
         
         const options = {
-            filterType: 'checkbox',
+            filterType: 'dropdown',
             selectableRows: 'none',
             responsive: 'scroll',
             rowsPerPage: 10,
             download: false,
             rowsPerPageOptions: [10,25,50,100],
-          customSort: (data, colIndex, order) => {
-            return data.sort((a, b) => {
-            return a.data[colIndex].length > b.data[colIndex].length * (order === "asc" ? -1 : 1);
-          });
-        }
+        //   customSort: (data, colIndex, order) => {
+        //     return data.sort((a, b) => {
+        //     return a.data[colIndex].length > b.data[colIndex].length * (order === "asc" ? -1 : 1);
+        //   });
+        // }
     }
         var columns = [ 
             {
