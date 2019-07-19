@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 
-class Login extends React.Component {
+class LoginForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -54,6 +54,4 @@ class Login extends React.Component {
   }
 }
 
-const Login = Form.create({ name: 'normal_login' })(Login);
-
-export default Login;
+export default LoginForm;
