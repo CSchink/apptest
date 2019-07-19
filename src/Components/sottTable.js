@@ -47,10 +47,9 @@ class SottTable extends Component {
             filterType: 'multiselect',
             selectableRows: 'none',
             responsive: 'scroll',
-            rowsPerPage: 100,
+            rowsPerPage: 25,
             download: false,
             rowsPerPageOptions: [10,25,50,100],
-            serverSide: true,
             customSort: (data, colIndex, order) => {
                 return data.sort((a, b) => {
                   return a.data[colIndex].length > b.data[colIndex].length * (order === "asc" ? -1 : 1);
