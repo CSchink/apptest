@@ -50,11 +50,6 @@ class SottTable extends Component {
             rowsPerPage: 25,
             download: false,
             rowsPerPageOptions: [10,25,50,100],
-            customSort: (data, colIndex, order) => {
-                return data.sort((a, b) => {
-                  return a.data[colIndex].length > b.data[colIndex].length * (order === "asc" ? -1 : 1);
-                });
-              }
     }
         var columns = [ 
             {
