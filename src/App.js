@@ -45,8 +45,8 @@ class App extends Component {
               </ul>
             </div>
           </nav> */}
+          <NavBar/>
       <JumbotronPage />
-      <NavBar/>
       <Route path ="/dashboards" component ={SottDashBoard} />
       <Route path="/input" component={InputPage} />
       <Route path="/" exact component ={Login} />
