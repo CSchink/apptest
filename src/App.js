@@ -28,9 +28,9 @@ class App extends Component {
       </nav> */}
 
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a className="navbar-brand" href="https://www.sott.net/" target="_blank">
-                          </a>
-            <Link to="/" className="navbar-brand">SOTT Lab</Link>
+            {/* <a className="navbar-brand" href="https://www.sott.net/" target="_blank">
+                          </a> */}
+            <Link to="/sottlab" className="navbar-brand">SOTT Lab</Link>
             <div className="collpase nav-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
