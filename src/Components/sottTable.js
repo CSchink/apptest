@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDom from 'react';
 import axios from 'axios';
 import MUIDataTable from "mui-datatables";
+import JumbotronPage from './Components/jumbotron';
 
 import {
     createMuiTheme,
@@ -163,6 +164,7 @@ class SottTable extends Component {
         
             
             return (
+            <JumbotronPage />
 <MuiThemeProvider theme={newTheme}>
     <MUIDataTable
                 columns={columns}
