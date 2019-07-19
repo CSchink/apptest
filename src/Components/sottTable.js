@@ -44,10 +44,11 @@ class SottTable extends Component {
     render() {
         
         const options = {
-            filterType: 'multiselect',
+            filterType: 'checkbox',
             selectableRows: 'none',
             responsive: 'scroll',
             rowsPerPage: 10,
+            download: false,
             rowsPerPageOptions: [10,25,50,100],
           customSort: (data, colIndex, order) => {
             return data.sort((a, b) => {
