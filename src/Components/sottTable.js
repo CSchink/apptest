@@ -141,7 +141,7 @@ class SottTable extends Component {
         var data=[]
         console.log(this.state);
         this.state.sottlab.forEach((item) => {
-            var arr=[moment(item.Date).calendar(),
+            var arr=[moment(item.Date).format(),
                     item.Entry,
                     item.Century,
                     item.Event,
