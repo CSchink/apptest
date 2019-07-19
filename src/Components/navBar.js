@@ -1,3 +1,4 @@
+import React, {Component} from 'react';
 import { Menu, Icon } from 'antd';
 import { BrowserRouter as Link } from "react-router-dom";
 const { SubMenu } = Menu;
