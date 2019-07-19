@@ -9,6 +9,7 @@ import SottDashBoard from './Components/sottdashboards';
 import JumbotronPage from './Components/jumbotron';
 import SottTable from './Components/sottTable';
 import InputPage from './Components/inputPage';
+import Login from './Components/Login';
 
 class App extends Component {
   render() { 
@@ -44,7 +45,8 @@ class App extends Component {
       <JumbotronPage />
       <Route path ="/dashboards" component ={SottDashBoard} />
       <Route path="/input" component={InputPage} />
-      <Route path="/" exact component ={SottTable} />
+      <Route path="/" exact component ={Login} />
+      <Route path="/sottlab" exact component ={SottTable} />
       
     </div>
     </Router>
