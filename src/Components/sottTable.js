@@ -51,7 +51,11 @@ class SottTable extends Component {
             download: false,
             rowsPerPageOptions: [10,25,50,100],
             serverSide: true,
-            // customSort: (data, colIndex, order) => { return data.sort((a, b) => { if (colIndex === 1) { return (new Date(a.data[colIndex]) < new Date(b.data[colIndex]) ? -1: 1 ) * (order === 'desc' ? 1 : -1); } else { return (a.data[colIndex] < b.data[colIndex] ? -1: 1 ) * (order === 'desc' ? 1 : -1); } }); }
+            customSort: (data, colIndex, order) => {
+                return data.sort((a, b) => {
+                  return a.data[colIndex].length > b.data[colIndex].length * (order === "asc" ? -1 : 1);
+                });
+              }
     }
         var columns = [ 
             {
@@ -60,7 +64,6 @@ class SottTable extends Component {
                 options:{
                     filter: false,
                     sort: true,
-                    sortDirection: 'desc'
                 }
             },
             {
@@ -94,7 +97,6 @@ class SottTable extends Component {
                     filter: true,
                     sort: false,
                     display: false,
-                    filterType: 'checkbox',
                    }
                 },
             {
