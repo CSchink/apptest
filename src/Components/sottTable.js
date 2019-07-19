@@ -93,6 +93,8 @@ class SottTable extends Component {
                 options: {
                     filter: true,
                     sort: false,
+                    display: false,
+                    filterType: 'checkbox',
                    }
                 },
             {
@@ -110,6 +112,7 @@ class SottTable extends Component {
             options: {
                 filter: true,
                 sort: false,
+                display: false,
                }
             },
             // {
@@ -126,6 +129,7 @@ class SottTable extends Component {
                 options: {
                     filter: true,
                     sort: false,
+                    display: false,
                     }
                 },
                 {
@@ -134,6 +138,7 @@ class SottTable extends Component {
                     options: {
                         filter: false,
                         sort: false,
+                        display: false,
                         }
                     }
         ]
