@@ -36,3 +36,6 @@ body .MUIDataTable-responsiveScroll-851 {
   max-height: 100% !important;
 }
 
+#components-form-demo-normal-login .login-form {
+  max-width: 300px;
+}
