@@ -15,7 +15,7 @@ class Login extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-        <div style={{width: "300px", minHeight: "200px", textAlign: 'center'}}>
+        <div style={{width: "300px", minHeight: "200px", justifyContent: 'center'}}>
       <Form onSubmit={this.handleSubmit} className="login-form">
         <Form.Item>
           {getFieldDecorator('username', {
