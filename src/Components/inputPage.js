@@ -94,7 +94,7 @@ class InputPage extends React.Component {
         </InputGroup>
         <br />
         <InputGroup compact>
-        <Input style={{ width: '25%' }} placeholder="Page" />
+        <Input style={{ width: '50%' }} placeholder="Page" />
         </InputGroup>
         <br />
         
@@ -181,7 +181,7 @@ class InputPage extends React.Component {
                 onChange={e => this.change(e)}
             />
             </div> */}
-            <Button color="primary" block>Submit</Button>
+            <Button type="primary" block>Submit</Button>
             </div>
         )
     }
