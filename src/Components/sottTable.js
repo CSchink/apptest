@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDom from 'react';
 import axios from 'axios';
 import MUIDataTable from "mui-datatables";
+import TagList from './TagList'
 
 import {
     createMuiTheme,
@@ -163,7 +164,8 @@ class SottTable extends Component {
         
             
             return (
-            
+            <div>
+            <TagList />
             <MuiThemeProvider theme={newTheme}>
                 <MUIDataTable
                             columns={columns}
@@ -171,7 +173,7 @@ class SottTable extends Component {
                             options={options}
                             />
             </MuiThemeProvider>
-            
+            </div>
             // <MDBDataTable
             // autoWidth
             // striped
