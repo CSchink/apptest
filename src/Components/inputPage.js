@@ -55,7 +55,7 @@ class InputPage extends React.Component {
             width: "600px", 
             minHeight: "200px", 
             alignItem: 'center', 
-            padding: "100px 20px"}}>
+            padding: "20px 20px"}}>
                 <p>Reminder that all fields are required</p>
             <InputGroup compact>
           <Input style={{ width: '50%' }} placeholder="century" 
