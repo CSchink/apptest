@@ -39,12 +39,13 @@ class InputPage extends React.Component {
         <br />
         <TextArea
             placeholder="Entry"
-            autosize={{ minRows: 2, maxRows: 8 }}
+            autosize 
             type="text"    
-                name='event'
-                value={this.state.event} 
-                onChange={e => this.change(e)}
+            name='event'
+            value={this.state.event} 
+            onChange={e => this.change(e)}
             />
+        <br />
         <br />
         <InputGroup compact>
         <Input style={{ width: '50%' }} placeholder="SOTT Category" />
