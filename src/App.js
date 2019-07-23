@@ -7,7 +7,6 @@ import './App.css';
 import 'antd/dist/antd.css';
 
 import SottDashBoard from './Components/sottdashboards';
-import JumbotronPage from './Components/jumbotron';
 import SottTable from './Components/sottTable';
 import InputPage from './Components/inputPage';
 import LoginForm from './Components/Login';
@@ -29,8 +28,8 @@ class App extends Component {
             {/* <a className="navbar-brand" href="https://www.sott.net/" target="_blank">
                           </a> */}
             <Link to="/sottlab" className="navbar-brand">SOTT Lab</Link>
-            <div className="collpase nav-collapse">
-              <ul className="navbar-nav mr-auto">
+            <div className="collapse nav-collapse">
+              <ul className="navbar-nav">
                 <li className="navbar-item">
                   <Link to="/" className="nav-link">Login</Link>
                 </li>
