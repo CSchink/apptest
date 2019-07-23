@@ -58,7 +58,7 @@ class InputPage extends React.Component {
             padding: "10px 20px"}}>
                 <p>Reminder that all fields are required</p>
             <InputGroup compact>
-          <Input style={{ width: '50%' }} placeholder="century" 
+          <Input style={{ width: '50%' }} placeholder="Century" 
                 type="text"
                 name='century'
                 value={this.state.century} 
@@ -66,16 +66,6 @@ class InputPage extends React.Component {
           <DatePicker style={{ width: '50%' }}  value={this.state.date} 
                 onChange={e => this.change(e)} />
         </InputGroup>
-        <br />
-        <TextArea
-            placeholder="Entry"
-            autosize 
-            type="text"    
-            name='event'
-            value={this.state.event} 
-            onChange={e => this.change(e)}
-            />
-        <br />
         <br />
         <InputGroup compact>
         <Input style={{ width: '50%' }} placeholder="SOTT Category" />
@@ -100,7 +90,16 @@ class InputPage extends React.Component {
         <Input style={{ width: '50%' }} placeholder="Page" />
         </InputGroup>
         <br />
-        
+        <TextArea
+            placeholder="Entry"
+            autosize={{ minRows: 2, maxRows: 8 }} 
+            type="text"    
+            name='event'
+            value={this.state.event} 
+            onChange={e => this.change(e)}
+            />
+        <br />
+        <br />
             {/* <div className="form-group">
                 <label htmlFor="exampleInput">Date</label>
                 <input type="text"
