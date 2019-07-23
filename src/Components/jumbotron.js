@@ -2,6 +2,7 @@ import React from "react";
 import { MDBJumbotron, MDBBtn, MDBContainer, MDBRow, MDBCol, MDBCardTitle, MDBIcon } from "mdbreact";
 
 const JumbotronPage = () => {
+  const text = props => <h1>{props.text}</h1>
   return (
     <div>
     <MDBContainer>
