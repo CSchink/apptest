@@ -8,6 +8,7 @@ const InputGroup = Input.Group;
   
 class InputPage extends React.Component {
     state={
+        dataSource:'',
         date:'',
         entry:'',
         century:'',
@@ -24,9 +25,28 @@ class InputPage extends React.Component {
             [e.target.name]: e.target.value
         });
     }
+
+    componentDidMount() {
+        axios.get('/.netlify/functions/getData')
+        .then((response) => {this.setState({dataSource: response.data})
+        console.log(response.data)
+     }) 
+         .catch(error => {
+             console.error(error)
+           })
+       }
+
+    //    handleChange = value => {
+    //     this.state.dataSource.forEach((item) => {
+    //         !value || value.indexOf()
+    //         ? []
+    //         : ['${value}']
+    //    })
+    // }
+
     render() {
         return (
-            <div style={{margin: "30px auto", boxSizing: "border-box", width: "500px", minHeight: "200px", alignItem: 'center', padding: "10px 20px"}}>
+            <div style={{margin: "30px auto", boxSizing: "border-box", width: "600px", minHeight: "200px", alignItem: 'center', padding: "100px 20px"}}>
             <InputGroup compact>
           <Input style={{ width: '50%' }} placeholder="century" 
                 type="text"
@@ -49,9 +69,25 @@ class InputPage extends React.Component {
         <br />
         <InputGroup compact>
         <Input style={{ width: '50%' }} placeholder="SOTT Category" />
-        <Input style={{ width: '50%' }} placeholder="Event / Line of Force" />
+        <AutoComplete
+            dataSource={this.state.dataSource}
+            style={{ width: '50%' }}
+            // onChange={this.handleChange}
+            placeholder="Event"
+          />
         </InputGroup>
         <br />
+        <InputGroup compact>
+        <Input style={{ width: '50%' }} placeholder="Originating" />
+        <Input style={{ width: '50%' }} placeholder="Target" />
+        </InputGroup>
+        <br />
+        <InputGroup compact>
+        <Input style={{ width: '75%' }} placeholder="Source" />
+        <Input style={{ width: '25%' }} placeholder="Page" />
+        </InputGroup>
+        <br />
+        
             {/* <div className="form-group">
                 <label htmlFor="exampleInput">Date</label>
                 <input type="text"
