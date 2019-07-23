@@ -1,6 +1,7 @@
 import React from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 
+
 class Login extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
@@ -14,6 +15,7 @@ class Login extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
+        <div>
       <Form onSubmit={this.handleSubmit} className="login-form">
         <Form.Item>
           {getFieldDecorator('username', {
@@ -50,6 +52,7 @@ class Login extends React.Component {
           Or <a href="">register now!</a>
         </Form.Item>
       </Form>
+      </div>
     );
   }
 }
