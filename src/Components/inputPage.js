@@ -3,7 +3,7 @@ import {MDBContainer, MDBBtn } from 'mdbreact';
 import { Input, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
 
 const { TextArea } = Input;
-
+const InputGroup = Input.Group;
 
   
 class InputPage extends React.Component {
@@ -38,7 +38,8 @@ class InputPage extends React.Component {
                 className="form-control form-control-md"
                 onChange={e => this.change(e)} />
         </InputGroup>
-        <TextArea rows={4} />
+        <TextArea rows={4} defaultValue="Entry"/>
+
             {/* <div className="form-group">
                 <label htmlFor="exampleInput">Date</label>
                 <input type="text"
