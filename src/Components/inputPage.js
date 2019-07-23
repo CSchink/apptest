@@ -1,6 +1,7 @@
 import React from 'react';
 // import {MDBContainer, MDBBtn } from 'mdbreact';
 import { Input, Button, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
+import JumbotronPage from './jumbotron';
 
 const { TextArea } = Input;
 const InputGroup = Input.Group;
