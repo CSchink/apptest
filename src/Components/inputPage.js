@@ -1,6 +1,11 @@
 import React from 'react';
 import {MDBContainer, MDBBtn } from 'mdbreact';
+import { Input } from 'antd';
 
+const { TextArea } = Input;
+
+
+  
 class InputPage extends React.Component {
     state={
         date:'',
@@ -19,7 +24,6 @@ class InputPage extends React.Component {
             [e.target.name]: e.target.value
         });
     }
-
     render() {
         return (
             <MDBContainer>
@@ -52,13 +56,15 @@ class InputPage extends React.Component {
             </div>
             <div className="form-group">
             <label htmlFor="exampleInput">Event</label>
-            <input type="text"    
+            <TextArea
+            placeholder="Autosize height with minimum and maximum number of lines"
+            autosize={{ minRows: 2, maxRows: 6 }}
+            type="text"    
                 name='event'
                 value={this.state.event} 
                 className="form-control form-control-md"
                 onChange={e => this.change(e)}
-                />
-            </div>
+            /></div>
             <div className="form-group">
             <label htmlFor="exampleInput">SOTT Category</label>
             <input type="text"    
