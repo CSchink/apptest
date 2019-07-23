@@ -19,6 +19,7 @@ class Login extends React.Component {
         <div><JumbotronPage />
         <div style={{  margin: "30px auto", boxSizing: "border-box", width: "500px", minHeight: "200px", alignItem: 'center', padding: "20px 20px"}}>
       <Form onSubmit={this.handleSubmit} className="login-form">
+        <Header>Log Into SOTT Lab</Header>
         <Form.Item>
           {getFieldDecorator('username', {
             rules: [{ required: true, message: 'Please input your username!' }],
@@ -52,8 +53,7 @@ class Login extends React.Component {
           <br />
           <a className="login-form-forgot" href="">
             Forgot password?
-          </a>
-          Or <a href="">register now!</a>
+          </a> Or <a href="">register now!</a>
         </Form.Item>
       </Form>
       </div>
