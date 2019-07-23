@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
+import JumbotronPage from './jumbotron';
 
 
 class Login extends React.Component {
@@ -45,14 +46,13 @@ class Login extends React.Component {
             initialValue: true,
           })(<Checkbox>Remember me</Checkbox>)}
           <br />
-          <Button type="primary" htmlType="submit" className="login-form-button">
+          <Button size ="large" type="primary" htmlType="submit" className="login-form-button">
             Log in
           </Button>
           <br />
           <a className="login-form-forgot" href="">
             Forgot password?
           </a>
-          <br />
           Or <a href="">register now!</a>
         </Form.Item>
       </Form>
