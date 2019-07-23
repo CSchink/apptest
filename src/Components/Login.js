@@ -17,9 +17,8 @@ class Login extends React.Component {
     const { getFieldDecorator } = this.props.form;
     return (
         <div><JumbotronPage />
-        <div style={{  margin: "30px auto", boxSizing: "border-box", width: "500px", minHeight: "200px", alignItem: 'center', padding: "20px 20px"}}>
+        <div style={{  margin: "30px auto", boxSizing: "border-box", width: "500px", minHeight: "200px", alignItem: 'center', padding: "10px 20px"}}>
       <Form onSubmit={this.handleSubmit} className="login-form">
-        <h1>Welcome</h1>
         <Form.Item>
           {getFieldDecorator('username', {
             rules: [{ required: true, message: 'Please input your username!' }],
