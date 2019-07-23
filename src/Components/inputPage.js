@@ -1,6 +1,6 @@
 import React from 'react';
 import {MDBContainer, MDBBtn } from 'mdbreact';
-import { Input, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
+import { Input, Button, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
 
 const { TextArea } = Input;
 const InputGroup = Input.Group;
@@ -83,7 +83,9 @@ class InputPage extends React.Component {
         </InputGroup>
         <br />
         <InputGroup compact>
-        <Input style={{ width: '75%' }} placeholder="Source" />
+        <Input style={{ width: '100%' }} placeholder="Source" />
+        </InputGroup>
+        <InputGroup compact>
         <Input style={{ width: '25%' }} placeholder="Page" />
         </InputGroup>
         <br />
@@ -171,7 +173,7 @@ class InputPage extends React.Component {
                 onChange={e => this.change(e)}
             />
             </div> */}
-            <MDBBtn color="primary">Enter</MDBBtn>
+            <Button color="primary" block>Submit</Button>
             </div>
         )
     }
