@@ -15,7 +15,8 @@ class Login extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-        <div style={{  margin: "30px auto", boxSizing: "border-box", width: "500px", minHeight: "200px", alignItem: 'center', padding: "400px 20px"}}>
+        <div><JumbotronPage />
+        <div style={{  margin: "30px auto", boxSizing: "border-box", width: "500px", minHeight: "200px", alignItem: 'center', padding: "200px 20px"}}>
       <Form onSubmit={this.handleSubmit} className="login-form">
         <Form.Item>
           {getFieldDecorator('username', {
@@ -55,6 +56,7 @@ class Login extends React.Component {
           Or <a href="">register now!</a>
         </Form.Item>
       </Form>
+      </div>
       </div>
     );
   }

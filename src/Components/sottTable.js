@@ -164,7 +164,7 @@ class SottTable extends Component {
         
             
             return (
-            <div><JumbotronPage />
+            
             <MuiThemeProvider theme={newTheme}>
                 <MUIDataTable
                             columns={columns}
@@ -172,7 +172,7 @@ class SottTable extends Component {
                             options={options}
                             />
             </MuiThemeProvider>
-            </div>
+            
             // <MDBDataTable
             // autoWidth
             // striped
