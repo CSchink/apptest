@@ -46,14 +46,16 @@ class InputPage extends React.Component {
 
     render() {
         return (
+            <div>
+            <JumbotronPage text="SOTT Lab Data Entry" />
+           
             <div style={{margin: "30px auto", 
             boxSizing: "border-box", 
             width: "600px", 
             minHeight: "200px", 
             alignItem: 'center', 
             padding: "100px 20px"}}>
-                <h1>Submit SOTT Lab Data</h1>
-                <p>Remember that all fields are required</p>
+                <p>Reminder that all fields are required</p>
             <InputGroup compact>
           <Input style={{ width: '50%' }} placeholder="century" 
                 type="text"
@@ -182,6 +184,7 @@ class InputPage extends React.Component {
             />
             </div> */}
             <Button type="primary" block>Submit</Button>
+            </div>
             </div>
         )
     }
