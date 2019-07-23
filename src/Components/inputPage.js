@@ -1,6 +1,6 @@
 import React from 'react';
 import {MDBContainer, MDBBtn } from 'mdbreact';
-import { Input } from 'antd';
+import { Input, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
 
 const { TextArea } = Input;
 
@@ -26,8 +26,20 @@ class InputPage extends React.Component {
     }
     render() {
         return (
-            <MDBContainer>
-            <div className="form-group">
+            <div>
+                <InputGroup compact>
+          <Input style={{ width: '50%' }} defaultValue="input century" 
+                type="number"
+                name='century'
+                value={this.state.century} 
+                className="form-control form-control-md"
+                onChange={e => this.change(e)}/>
+          <DatePicker style={{ width: '50%' }}  value={this.state.date} 
+                className="form-control form-control-md"
+                onChange={e => this.change(e)} />
+        </InputGroup>
+        <TextArea rows={4} />
+            {/* <div className="form-group">
                 <label htmlFor="exampleInput">Date</label>
                 <input type="text"
                 name='date'
@@ -109,9 +121,9 @@ class InputPage extends React.Component {
                 className="form-control form-control-md"
                 onChange={e => this.change(e)}
             />
-            </div>
+            </div> */}
             <MDBBtn color="primary">Enter</MDBBtn>
-            </MDBContainer>
+            </div>
         )
     }
 }
