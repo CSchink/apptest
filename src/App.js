@@ -29,7 +29,7 @@ class App extends Component {
                           </a> */}
             <Link to="/sottlab" className="navbar-brand">SOTT Lab</Link>
             <div className="collapse nav-collapse">
-              <ul className="navbar-nav">
+              <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
                   <Link to="/" className="nav-link">Login</Link>
                 </li>
