@@ -29,8 +29,8 @@ class App extends Component {
                           </a> */}
             <Link to="/sottlab" className="navbar-brand">SOTT Lab</Link>
             <div className="collpase nav-collapse">
-              <ul className="navbar-nav ml-auto">
-                <li className="navbar-item">
+              <ul className="navbar-nav mr-auto">
+                <li className="navbar-item" style ={{textAlign: right}}>
                   <Link to="/" className="nav-link">Login</Link>
                 </li>
                 <li className="navbar-item">
