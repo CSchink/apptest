@@ -26,10 +26,10 @@ class InputPage extends React.Component {
     }
     render() {
         return (
-            <div>
+            <MDBContainer>
                 <InputGroup compact>
-          <Input style={{ width: '50%' }} defaultValue="input century" 
-                type="number"
+          <Input style={{ width: '50%' }} placeholder="century" 
+                type="text"
                 name='century'
                 value={this.state.century} 
                 className="form-control form-control-md"
@@ -38,8 +38,11 @@ class InputPage extends React.Component {
                 className="form-control form-control-md"
                 onChange={e => this.change(e)} />
         </InputGroup>
-        <TextArea rows={4} defaultValue="Entry"/>
-
+        <TextArea rows={4} placeholder="Entry"/>
+        <InputGroup compact>
+        <Input style={{ width: '50%' }} placeholder="SOTT Category" />
+          <Input style={{ width: '50%' }} placeholder="Event / Line of Force" />
+        </InputGroup>
             {/* <div className="form-group">
                 <label htmlFor="exampleInput">Date</label>
                 <input type="text"
@@ -124,7 +127,7 @@ class InputPage extends React.Component {
             />
             </div> */}
             <MDBBtn color="primary">Enter</MDBBtn>
-            </div>
+            </MDBContainer>
         )
     }
 }
