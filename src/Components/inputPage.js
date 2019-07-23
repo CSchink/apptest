@@ -26,15 +26,15 @@ class InputPage extends React.Component {
         });
     }
 
-    componentDidMount() {
-        axios.get('/.netlify/functions/getData')
-        .then((response) => {this.setState({dataSource: response.data})
-        console.log(response.data)
-     }) 
-         .catch(error => {
-             console.error(error)
-           })
-       }
+    // componentDidMount() {
+    //     axios.get('/.netlify/functions/getData')
+    //     .then((response) => {this.setState({dataSource: response.data})
+    //     console.log(response.data)
+    //  }) 
+    //      .catch(error => {
+    //          console.error(error)
+    //        })
+    //    }
 
     //    handleChange = value => {
     //     this.state.dataSource.forEach((item) => {
