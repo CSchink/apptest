@@ -17,7 +17,7 @@ class Login extends React.Component {
     const { getFieldDecorator } = this.props.form;
     return (
         <div><JumbotronPage text="SOTT Lab - Login" />
-        <div style={{  margin: "30px auto", boxSizing: "border-box", width: "500px", minHeight: "200px", alignItem: 'center', padding: "10px 20px"}}>
+        <div style={{  margin: "30px auto", boxSizing: "border-box", width: "500px", minHeight: "200px", alignItem: 'center'}}>
             <p>Please sign in below</p>
       <Form onSubmit={this.handleSubmit} className="login-form">
         <Form.Item>
