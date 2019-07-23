@@ -26,16 +26,14 @@ class InputPage extends React.Component {
     }
     render() {
         return (
-            <MDBContainer>
+            <div>
                 <InputGroup compact>
-          <Input style={{ width: '50%' }} placeholder="century" 
+          <Input style={{ width: '30%' }} placeholder="century" 
                 type="text"
                 name='century'
                 value={this.state.century} 
-                className="form-control form-control-md"
                 onChange={e => this.change(e)}/>
-          <DatePicker style={{ width: '50%' }}  value={this.state.date} 
-                className="form-control form-control-md"
+          <DatePicker style={{ width: '70%' }}  value={this.state.date} 
                 onChange={e => this.change(e)} />
         </InputGroup>
         <TextArea rows={4} placeholder="Entry"/>
@@ -127,7 +125,7 @@ class InputPage extends React.Component {
             />
             </div> */}
             <MDBBtn color="primary">Enter</MDBBtn>
-            </MDBContainer>
+            </div>
         )
     }
 }
