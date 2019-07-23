@@ -26,21 +26,31 @@ class InputPage extends React.Component {
     }
     render() {
         return (
-            <div>
-                <InputGroup compact>
-          <Input style={{ width: '30%' }} placeholder="century" 
+            <div style={{margin: "30px auto", boxSizing: "border-box", width: "500px", minHeight: "200px", alignItem: 'center', padding: "10px 20px"}}>
+            <InputGroup compact>
+          <Input style={{ width: '50%' }} placeholder="century" 
                 type="text"
                 name='century'
                 value={this.state.century} 
                 onChange={e => this.change(e)}/>
-          <DatePicker style={{ width: '70%' }}  value={this.state.date} 
+          <DatePicker style={{ width: '50%' }}  value={this.state.date} 
                 onChange={e => this.change(e)} />
         </InputGroup>
-        <TextArea rows={4} placeholder="Entry"/>
+        <br />
+        <TextArea
+            placeholder="Entry"
+            autosize={{ minRows: 2, maxRows: 8 }}
+            type="text"    
+                name='event'
+                value={this.state.event} 
+                onChange={e => this.change(e)}
+            />
+        <br />
         <InputGroup compact>
         <Input style={{ width: '50%' }} placeholder="SOTT Category" />
-          <Input style={{ width: '50%' }} placeholder="Event / Line of Force" />
+        <Input style={{ width: '50%' }} placeholder="Event / Line of Force" />
         </InputGroup>
+        <br />
             {/* <div className="form-group">
                 <label htmlFor="exampleInput">Date</label>
                 <input type="text"
