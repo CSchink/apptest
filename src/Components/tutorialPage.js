@@ -6,6 +6,7 @@ render() {
 
 return(
   <div>
+    <JumbotronPage text="Welcome to the SOTT Lab Tutorial"/>
     <h1>This will be the Tutorial Page</h1>
     <p>There will be lots of words</p>
     <p>Below you can watch a video (it's not a tutorial video yet)</p>
