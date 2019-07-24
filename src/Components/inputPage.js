@@ -137,7 +137,7 @@ class InputPage extends React.Component {
           />
         <AutoComplete
             className="certain-category-search"
-            dataSource={sottData}
+            dataSource={data}
             dropdownClassName="certain-category-search-dropdown"
             dropdownMatchSelectWidth={false}
             style={{ width: '50%' }}
