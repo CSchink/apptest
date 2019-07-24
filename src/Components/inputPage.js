@@ -2,11 +2,10 @@ import React from 'react';
 // import {MDBContainer, MDBBtn } from 'mdbreact';
 import { Input, Button, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
 import JumbotronPage from './jumbotron';
+import axios from 'axios';
 
 const { TextArea } = Input;
 const InputGroup = Input.Group;
-const { Option, OptGroup } = AutoComplete;
-
   
 class InputPage extends React.Component {
     state={
@@ -21,6 +20,16 @@ class InputPage extends React.Component {
         source:'',
         page:'',
     }
+
+    componentDidMount() {
+        axios.get('/.netlify/functions/getData')
+        .then((response) => {this.setState({dataSource: response.data})
+        console.log(response.data)
+     }) 
+         .catch(error => {
+             console.error(error)
+           })
+       }
 
     change = (e) => {
         this.setState({
@@ -47,43 +56,13 @@ class InputPage extends React.Component {
     // }
 
     render() {
-        const dataSource = 
-         [
-            "Capitalism",
-            "Revolution",
-            "Banking",
-            "Censorship and Surveillance",
-            "Colonization",
-            "Communism",
-            "Christianity",
-            "Coup D'etat",
-            "Balkans Conflict",
-            "Dionysus Syndrome",
-            "Elections",
-            "Energy Crisis",
-            "Esoterica",
-            "Evolution of Deep State",
-            "Food Shortages",
-            "Foundation of Israel",
-            "Global Arms Trade",
-            "Greek Religion",
-            "Gun Control",
-            "Ice Age",
-            "ID vs Darwinian Evolution",
-            "International Finance",
-            "Iran Contra",
-            "Iran Scare",
-            "Islam",
-            "Israel Lobby",
-            "Israel-Palestine Conflict",
-            "JFK Assassination",
-            "Judaism",
-            "Jung Cult",
-            "Korean War",
-            "Lead-up to World War I",
-         ]
-       
-        const sottCategories = [
+      let data = []  
+      const dataSource = this.state.sottlab.forEach((item) => {
+            var arr=[item.Event]
+            data.push(arr)
+      }
+      )
+    const sottCategories = [
             "Puppet Masters",
             "Society's Child",
             "Earth Changes",
@@ -97,7 +76,6 @@ class InputPage extends React.Component {
         return (
             <div>
             <JumbotronPage text="SOTT Lab - Data Entry" />
-           
             <div style={{margin: "30px auto", 
             boxSizing: "border-box", 
             width: "600px", 
@@ -248,5 +226,6 @@ class InputPage extends React.Component {
         )
     }
 }
+
 
 export default InputPage;
