@@ -4,7 +4,7 @@ import axios from 'axios';
 import MUIDataTable from "mui-datatables";
 import TagList from './TagList'
 import { Icon, Button, Input, AutoComplete } from 'antd';
-import ButtonUp from './buttonup';
+
 
 import {
     createMuiTheme,
@@ -175,7 +175,6 @@ class SottTable extends Component {
                             options={options}
                             />
             </MuiThemeProvider>
-            <ButtonUp />
             </div>
             // <MDBDataTable
             // autoWidth
