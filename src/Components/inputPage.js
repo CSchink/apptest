@@ -57,7 +57,7 @@ class InputPage extends React.Component {
 
     render() {
       let data = []  
-      const dataSource = this.state.sottlab.forEach((item) => {
+      const sottData = this.state.dataSource.forEach((item) => {
             var arr=[item.Event]
             data.push(arr)
       }
@@ -105,7 +105,7 @@ class InputPage extends React.Component {
           />
         <AutoComplete
             className="certain-category-search"
-            dataSource={dataSource}
+            dataSource={sottData}
             dropdownClassName="certain-category-search-dropdown"
             dropdownMatchSelectWidth={false}
             style={{ width: '50%' }}
