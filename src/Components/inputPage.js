@@ -26,7 +26,7 @@ class InputPage extends React.Component {
             [e.target.name]: e.target.value
         });
     }
-
+    
     // componentDidMount() {
     //     axios.get('/.netlify/functions/getData')
     //     .then((response) => {this.setState({dataSource: response.data})
@@ -46,6 +46,12 @@ class InputPage extends React.Component {
     // }
 
     render() {
+        const dataSource = 
+         [
+            "Capitalism",
+            "Revolution",
+         ]
+        
         return (
             <div>
             <JumbotronPage text="SOTT Lab - Data Entry" />
@@ -70,7 +76,7 @@ class InputPage extends React.Component {
         <InputGroup compact>
         <Input style={{ width: '50%' }} placeholder="SOTT Category" />
         <AutoComplete
-            dataSource={this.state.dataSource}
+            dataSource={dataSource}
             style={{ width: '50%' }}
             // onChange={this.handleChange}
             placeholder="Event"
