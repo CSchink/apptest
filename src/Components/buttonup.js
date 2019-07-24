@@ -11,9 +11,8 @@ class ButtonUp extends React.Component{
     Scroll down to see the bottom-right
     <strong style={{ color: '#1088e9' }}> blue </strong>
     button.
-  </div>,
-  mountNode
-);
+  </div>
+)
 }
 }
 
