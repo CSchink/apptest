@@ -6,6 +6,8 @@ import axios from 'axios';
 
 const { TextArea } = Input;
 const InputGroup = Input.Group;
+const { Option, OptGroup } = AutoComplete;
+
   
 class InputPage extends React.Component {
     state={
@@ -21,15 +23,6 @@ class InputPage extends React.Component {
         page:'',
     }
 
-    componentDidMount() {
-        axios.get('/.netlify/functions/getData')
-        .then((response) => {this.setState({dataSource: response.data})
-        console.log(response.data)
-     }) 
-         .catch(error => {
-             console.error(error)
-           })
-       }
 
     change = (e) => {
         this.setState({
@@ -56,13 +49,44 @@ class InputPage extends React.Component {
     // }
 
     render() {
-      let data = []  
-      const sottData = this.state.dataSource.forEach((item) => {
-            var arr=[item.Event]
-            data.push(arr)
-      }
-      )
-    const sottCategories = [
+    
+        const dataSource = 
+         [
+            "Capitalism",
+            "Revolution",
+            "Banking",
+            "Censorship and Surveillance",
+            "Colonization",
+            "Communism",
+            "Christianity",
+            "Coup D'etat",
+            "Balkans Conflict",
+            "Dionysus Syndrome",
+            "Elections",
+            "Energy Crisis",
+            "Esoterica",
+            "Evolution of Deep State",
+            "Food Shortages",
+            "Foundation of Israel",
+            "Global Arms Trade",
+            "Greek Religion",
+            "Gun Control",
+            "Ice Age",
+            "ID vs Darwinian Evolution",
+            "International Finance",
+            "Iran Contra",
+            "Iran Scare",
+            "Islam",
+            "Israel Lobby",
+            "Israel-Palestine Conflict",
+            "JFK Assassination",
+            "Judaism",
+            "Jung Cult",
+            "Korean War",
+            "Lead-up to World War I",
+         ]
+       
+        const sottCategories = [
             "Puppet Masters",
             "Society's Child",
             "Earth Changes",
@@ -105,7 +129,7 @@ class InputPage extends React.Component {
           />
         <AutoComplete
             className="certain-category-search"
-            dataSource={sottData}
+            dataSource={dataSource}
             dropdownClassName="certain-category-search-dropdown"
             dropdownMatchSelectWidth={false}
             style={{ width: '50%' }}
@@ -226,6 +250,5 @@ class InputPage extends React.Component {
         )
     }
 }
-
 
 export default InputPage;
