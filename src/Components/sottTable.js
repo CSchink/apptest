@@ -3,6 +3,7 @@ import ReactDom from 'react';
 import axios from 'axios';
 import MUIDataTable from "mui-datatables";
 import TagList from './TagList'
+import { Icon, Button, Input, AutoComplete } from 'antd';
 
 import {
     createMuiTheme,
@@ -164,7 +165,32 @@ class SottTable extends Component {
         
             
             return (
-            <div>
+            <div className="global-search-wrapper" style={{ width: 300 }}>
+            
+            <AutoComplete
+                        className="certain-category-search"
+                        dataSource={eventData}
+                        dropdownClassName="certain-category-search-dropdown"
+                        dropdownMatchSelectWidth={false}
+                        style={{ width: '50%' }}
+                        // onChange={this.handleChange}
+                        filterOption={(inputValue, option) =>
+                            option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+                        }
+                        placeholder="Event" >
+                <Input
+                        suffix={
+                        <Button
+                            className="search-btn"
+                            style={{ marginRight: -12 }}
+                            size="large"
+                            type="primary"
+                        >
+                        <Icon type="search" />
+                        </Button>
+                        }
+                    />
+                    </AutoComplete>
             <TagList />
             <MuiThemeProvider theme={newTheme}>
                 <MUIDataTable
