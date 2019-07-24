@@ -14,9 +14,9 @@ class YoutubeId extends React.Component {
       >
         <iframe
           style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
+            position: "center",
+            top: 25,
+            left: 25,
             width: "45%",
             height: "40%"
           }}
