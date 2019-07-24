@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { YoutubeId } from './youtube'
+import YoutubeId from './youtube'
 import JumbotronPage from './jumbotron';
 
 class TutorialPage extends React.Component {
