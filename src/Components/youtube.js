@@ -7,7 +7,7 @@ class YoutubeId extends React.Component {
         className="video"
         style={{
           position: "relative",
-        //   paddingBottom: "56.25%" /* 16:9 */,
+          paddingBottom: "1.25%" /* 16:9 */,
           paddingTop: 25,
           height: 0
         }}
