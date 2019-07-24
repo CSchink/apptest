@@ -44,7 +44,42 @@ class SottTable extends Component {
        }
       
     render() {
-        
+        const eventTableData = 
+         [
+            "Capitalism",
+            "Revolution",
+            "Banking",
+            "Censorship and Surveillance",
+            "Colonization",
+            "Communism",
+            "Christianity",
+            "Coup D'etat",
+            "Balkans Conflict",
+            "Dionysus Syndrome",
+            "Elections",
+            "Energy Crisis",
+            "Esoterica",
+            "Evolution of Deep State",
+            "Food Shortages",
+            "Foundation of Israel",
+            "Global Arms Trade",
+            "Greek Religion",
+            "Gun Control",
+            "Ice Age",
+            "ID vs Darwinian Evolution",
+            "International Finance",
+            "Iran Contra",
+            "Iran Scare",
+            "Islam",
+            "Israel Lobby",
+            "Israel-Palestine Conflict",
+            "JFK Assassination",
+            "Judaism",
+            "Jung Cult",
+            "Korean War",
+            "Lead-up to World War I",
+         ]
+
         const options = {
             filterType: 'multiselect',
             selectableRows: 'none',
@@ -169,7 +204,7 @@ class SottTable extends Component {
             
             <AutoComplete
                         className="certain-category-search"
-                        dataSource={eventData}
+                        dataSource={eventTableData}
                         dropdownClassName="certain-category-search-dropdown"
                         dropdownMatchSelectWidth={false}
                         style={{ width: '50%' }}
