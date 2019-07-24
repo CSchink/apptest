@@ -200,7 +200,7 @@ class SottTable extends Component {
         
             
             return (
-            <div className="global-search-wrapper" style={{ width: 300 }}>
+            <div>
             
             <AutoComplete
                         className="certain-category-search"
