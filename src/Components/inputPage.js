@@ -13,15 +13,15 @@ class InputPage extends React.Component {
         super();
         this.state={
             sottlab:'',
-            date:'',
-            entry:'',
-            century:'',
-            event:'',
-            category:'',
-            originating:'',
-            target:'',
-            source:'',
-            page:'',
+            // date:'',
+            // entry:'',
+            // century:'',
+            // event:'',
+            // category:'',
+            // originating:'',
+            // target:'',
+            // source:'',
+            // page:'',
         }
     }
 
@@ -54,6 +54,14 @@ class InputPage extends React.Component {
 
     render() {
         
+        let dataSource =[
+            this.state.sottlab.forEach((item) => {
+                let data = []    
+                var arr=[item.Event]
+                data.push(arr)
+            }
+            )
+        ]
         
         // const dataSource = 
         //  [
@@ -134,13 +142,7 @@ class InputPage extends React.Component {
           />
         <AutoComplete
             className="certain-category-search"
-            dataSource={
-                this.state.sottlab.forEach((item) => {
-                    let data = []    
-                    var arr=[item.Event]
-                      data.push(arr)
-                }
-                )}
+            dataSource={dataSource}
             dropdownClassName="certain-category-search-dropdown"
             dropdownMatchSelectWidth={false}
             style={{ width: '50%' }}
