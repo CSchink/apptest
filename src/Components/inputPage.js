@@ -5,6 +5,7 @@ import JumbotronPage from './jumbotron';
 
 const { TextArea } = Input;
 const InputGroup = Input.Group;
+const { Option, OptGroup } = AutoComplete;
 
   
 class InputPage extends React.Component {
@@ -81,7 +82,22 @@ class InputPage extends React.Component {
             "Korean War",
             "Lead-up to World War I",
          ]
-        
+       
+        const sottCategories = [
+            "Puppet Masters",
+            "Society's Child",
+            "Earth Changes",
+            "Fire in the Sky",
+            "Health and Wellness",
+            "Secret History",
+            "Science of the Spirit",
+            "Science and Technology"
+        ]
+        handleSearch = value => {
+            this.setState({
+              dataSource: !value ? [] : [value, value + value, value + value + value],
+            });
+          };
         return (
             <div>
             <JumbotronPage text="SOTT Lab - Data Entry" />
@@ -104,9 +120,20 @@ class InputPage extends React.Component {
         </InputGroup>
         <br />
         <InputGroup compact>
-        <Input style={{ width: '50%' }} placeholder="SOTT Category" />
         <AutoComplete
-            dataSource={dataSource}
+            dataSource={sottCategories}
+            style={{ width: '50%' }}
+            onChange={this.handleChange}
+            placeholder="SOTT Category"
+            filterOption={(inputValue, option) =>
+                option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+              }
+          />
+        <AutoComplete
+            className="certain-category-search"
+            dataSource={options}
+            dropdownClassName="certain-category-search-dropdown"
+            dropdownMatchSelectWidth={false}
             style={{ width: '50%' }}
             // onChange={this.handleChange}
             placeholder="Event"
