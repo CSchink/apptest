@@ -2,7 +2,6 @@ import React from 'react';
 // import {MDBContainer, MDBBtn } from 'mdbreact';
 import { Input, Button, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
 import JumbotronPage from './jumbotron';
-import axios from 'axios';
 
 const { TextArea } = Input;
 const InputGroup = Input.Group;
@@ -39,6 +38,12 @@ class InputPage extends React.Component {
     //          console.error(error)
     //        })
     //    }
+    //    let data = []  
+    //   const sottData = this.state.dataSource.forEach((item) => {
+    //         var arr=[item.Event]
+    //         data.push(arr)
+    //   }
+    //   )
 
     //    handleChange = value => {
     //     this.state.dataSource.forEach((item) => {
@@ -134,6 +139,9 @@ class InputPage extends React.Component {
             dropdownMatchSelectWidth={false}
             style={{ width: '50%' }}
             // onChange={this.handleChange}
+            filterOption={(inputValue, option) =>
+                option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+              }
             placeholder="Event"
           />
         </InputGroup>
