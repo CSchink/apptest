@@ -9,8 +9,8 @@ const { Option, OptGroup } = AutoComplete;
   
 class InputPage extends React.Component {
     
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state={
             sottlab:'',
             date:'',
@@ -25,12 +25,6 @@ class InputPage extends React.Component {
         }
     }
 
-    change = (e) => {
-        this.setState({
-            [e.target.name]: e.target.value
-        });
-    }
-    
     componentDidMount() {
         axios.get('/.netlify/functions/getData')
         .then((response) => {this.setState({sottlab: response.data})
@@ -40,6 +34,14 @@ class InputPage extends React.Component {
              console.error(error)
            })
        }
+
+    change = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+    
+    
       
 
     //    handleChange = value => {
@@ -52,12 +54,7 @@ class InputPage extends React.Component {
 
     render() {
         
-        let data = []  
-        this.state.sottlab.forEach((item) => {
-              var arr=[item.Event]
-              data.push(arr)
-        }
-        )
+        
         // const dataSource = 
         //  [
         //     "Capitalism",
@@ -137,7 +134,13 @@ class InputPage extends React.Component {
           />
         <AutoComplete
             className="certain-category-search"
-            dataSource={data}
+            dataSource={
+                this.state.sottlab.forEach((item) => {
+                    let data = []    
+                    var arr=[item.Event]
+                      data.push(arr)
+                }
+                )}
             dropdownClassName="certain-category-search-dropdown"
             dropdownMatchSelectWidth={false}
             style={{ width: '50%' }}
