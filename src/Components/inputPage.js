@@ -1,5 +1,4 @@
 import React from 'react';
-// import {MDBContainer, MDBBtn } from 'mdbreact';
 import { Input, Button, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
 import JumbotronPage from './jumbotron';
 import axios from 'axios';
@@ -26,7 +25,6 @@ class InputPage extends React.Component {
         }
     }
 
-
     change = (e) => {
         this.setState({
             [e.target.name]: e.target.value
@@ -42,12 +40,7 @@ class InputPage extends React.Component {
              console.error(error)
            })
        }
-    //    let data = []  
-    //   const sottData = this.state.dataSource.forEach((item) => {
-    //         var arr=[item.Event]
-    //         data.push(arr)
-    //   }
-    //   )
+      
 
     //    handleChange = value => {
     //     this.state.dataSource.forEach((item) => {
@@ -58,42 +51,48 @@ class InputPage extends React.Component {
     // }
 
     render() {
-    
-        const dataSource = 
-         [
-            "Capitalism",
-            "Revolution",
-            "Banking",
-            "Censorship and Surveillance",
-            "Colonization",
-            "Communism",
-            "Christianity",
-            "Coup D'etat",
-            "Balkans Conflict",
-            "Dionysus Syndrome",
-            "Elections",
-            "Energy Crisis",
-            "Esoterica",
-            "Evolution of Deep State",
-            "Food Shortages",
-            "Foundation of Israel",
-            "Global Arms Trade",
-            "Greek Religion",
-            "Gun Control",
-            "Ice Age",
-            "ID vs Darwinian Evolution",
-            "International Finance",
-            "Iran Contra",
-            "Iran Scare",
-            "Islam",
-            "Israel Lobby",
-            "Israel-Palestine Conflict",
-            "JFK Assassination",
-            "Judaism",
-            "Jung Cult",
-            "Korean War",
-            "Lead-up to World War I",
-         ]
+        
+        let data = []  
+        const sottData = this.state.dataSource.forEach((item) => {
+              var arr=[item.Event]
+              data.push(arr)
+        }
+        )
+        // const dataSource = 
+        //  [
+        //     "Capitalism",
+        //     "Revolution",
+        //     "Banking",
+        //     "Censorship and Surveillance",
+        //     "Colonization",
+        //     "Communism",
+        //     "Christianity",
+        //     "Coup D'etat",
+        //     "Balkans Conflict",
+        //     "Dionysus Syndrome",
+        //     "Elections",
+        //     "Energy Crisis",
+        //     "Esoterica",
+        //     "Evolution of Deep State",
+        //     "Food Shortages",
+        //     "Foundation of Israel",
+        //     "Global Arms Trade",
+        //     "Greek Religion",
+        //     "Gun Control",
+        //     "Ice Age",
+        //     "ID vs Darwinian Evolution",
+        //     "International Finance",
+        //     "Iran Contra",
+        //     "Iran Scare",
+        //     "Islam",
+        //     "Israel Lobby",
+        //     "Israel-Palestine Conflict",
+        //     "JFK Assassination",
+        //     "Judaism",
+        //     "Jung Cult",
+        //     "Korean War",
+        //     "Lead-up to World War I",
+        //  ]
        
         const sottCategories = [
             "Puppet Masters",
@@ -138,7 +137,7 @@ class InputPage extends React.Component {
           />
         <AutoComplete
             className="certain-category-search"
-            dataSource={dataSource}
+            dataSource={sottData}
             dropdownClassName="certain-category-search-dropdown"
             dropdownMatchSelectWidth={false}
             style={{ width: '50%' }}
