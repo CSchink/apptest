@@ -12,7 +12,7 @@ class InputPage extends React.Component {
     constructor(props) {
         super(props);
         this.state={
-            data:'',
+            sottlab:'',
             date:'',
             entry:'',
             century:'',
@@ -33,7 +33,7 @@ class InputPage extends React.Component {
     
     componentDidMount() {
         axios.get('/.netlify/functions/getData')
-        .then((response) => {this.setState({data: response.data})
+        .then((response) => {this.setState({sottlab: response.data})
         console.log(response.data)
      }) 
          .catch(error => {
@@ -52,12 +52,12 @@ class InputPage extends React.Component {
 
     render() {
         
-        // let data = []  
-        // const sottData = this.state.dataSource.forEach((item) => {
-        //       var arr=[item.Event]
-        //       data.push(arr)
-        // }
-        // )
+        let data = []  
+        this.state.sottlab.forEach((item) => {
+              var arr=[item.Event]
+              data.push(arr)
+        }
+        )
         // const dataSource = 
         //  [
         //     "Capitalism",
@@ -137,12 +137,7 @@ class InputPage extends React.Component {
           />
         <AutoComplete
             className="certain-category-search"
-            dataSource={this.state.data.forEach((item) => {
-                let event=[]
-                var arr=[item.Event]
-                event.push(arr)
-          }
-          )}
+            dataSource={data}
             dropdownClassName="certain-category-search-dropdown"
             dropdownMatchSelectWidth={false}
             style={{ width: '50%' }}
