@@ -10,6 +10,7 @@ import SottDashBoard from './Components/sottdashboards';
 import SottTable from './Components/sottTable';
 import InputPage from './Components/inputPage';
 import LoginForm from './Components/Login';
+import TutorialPage from './Components/TutorialPage';
 
 class App extends Component {
   render() { 
@@ -39,6 +40,9 @@ class App extends Component {
                 <li className="navbar-item">
                   <Link to="/input" className="nav-link">Input</Link>
                 </li>
+                <li className="navbar-item">
+                  <Link to="/tutorial" className="nav-link">Tutorial</Link>
+                </li>
               </ul>
             </div>
           </nav>
@@ -47,7 +51,7 @@ class App extends Component {
       <Route path="/input" component={InputPage} />
       <Route path="/" exact component ={LoginForm} />
       <Route path="/sottlab" exact component ={SottTable} />
-      
+      <Route path="/tutorial" component={TutorialPage} />
     </div>
     </Router>
   );
