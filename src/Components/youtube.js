@@ -17,10 +17,10 @@ class YoutubeId extends React.Component {
             position: "absolute",
             top: 0,
             left: 0,
-            width: "100%",
-            height: "100%"
+            width: "45%",
+            height: "40%"
           }}
-          src={`https://www.youtube.com/watch?v=nM9f0W2KD5s`}
+          src={'https://www.youtube.com/embed/OICbEzppGL8'}
           frameBorder="0"
         />
       </div>
