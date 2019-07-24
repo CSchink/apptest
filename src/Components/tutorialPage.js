@@ -9,7 +9,7 @@ render() {
 return(
   <div>
     <JumbotronPage text="Welcome to the SOTT Lab Tutorial"/>
-    <div style={{  margin: "30px auto", boxSizing: "border-box", width: "500px", minHeight: "200px", alignItem: 'center'}}>
+    <div style={{  margin: "30px auto", boxSizing: "border-box", alignItem: 'center'}}>
     <h1>This will be the Tutorial Page</h1>
     <p>There will be lots of words</p>
     <p>Below you can watch a video (it's not a tutorial video yet)</p>
