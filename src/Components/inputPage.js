@@ -108,8 +108,8 @@ class InputPage extends React.Component {
             "Science and Technology"
         ]
 
-        return (
-            <div>
+    return (
+        <div>
             <JumbotronPage text="SOTT Lab - Data Entry" />
             <div style={{margin: "30px auto", 
             boxSizing: "border-box", 
@@ -117,97 +117,97 @@ class InputPage extends React.Component {
             minHeight: "200px", 
             alignItem: 'center', 
             padding: "10px 20px"}}>
-                <p>Reminder that all fields are required</p>
-            <InputGroup compact>
-          <Input style={{ width: '50%' }} placeholder="Century" 
-                type="text"
-                name='century'
-                value={this.state.century} 
-                onChange={e => this.change(e)}/>
-          <DatePicker style={{ width: '50%' }}  value={this.state.date} 
-                onChange={e => this.change(e)} />
-        </InputGroup>
-        <br />
+            <p>Reminder that all fields are required</p>
+                <InputGroup compact>
+                    <Input style={{ width: '50%' }} placeholder="Century" 
+                            type="text"
+                            name='century'
+                            value={this.state.century} 
+                            onChange={e => this.change(e)}/>
+                    <DatePicker style={{ width: '50%' }}  value={this.state.date} 
+                            onChange={e => this.change(e)} />
+                 </InputGroup>
+            <br />
         <InputGroup compact>
-        <AutoComplete
-            dataSource={sottCategories}
-            style={{ width: '50%' }}
-            onChange={this.handleChange}
-            placeholder="SOTT Category"
-            filterOption={(inputValue, option) =>
-                option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
-              }
-          />
-        <AutoComplete
-            className="certain-category-search"
-            dataSource={eventData}
-            dropdownClassName="certain-category-search-dropdown"
-            dropdownMatchSelectWidth={false}
-            style={{ width: '50%' }}
-            // onChange={this.handleChange}
-            filterOption={(inputValue, option) =>
-                option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
-              }
-            placeholder="Event"
-          />
-        </InputGroup>
-        <br />
-        <InputGroup compact>
-        <AutoComplete
-            className="certain-category-search"
-            dataSource={originatingData}
-            dropdownClassName="certain-category-search-dropdown"
-            dropdownMatchSelectWidth={false}
-            style={{ width: '50%' }}
-            // onChange={this.handleChange}
-            filterOption={(inputValue, option) =>
-                option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
-              }
-            placeholder="Originating"
-          />
-          <AutoComplete
-            className="certain-category-search"
-            dataSource={targetData}
-            dropdownClassName="certain-category-search-dropdown"
-            dropdownMatchSelectWidth={false}
-            style={{ width: '50%' }}
-            // onChange={this.handleChange}
-            filterOption={(inputValue, option) =>
-                option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
-              }
-            placeholder="Target"
-          />
-        </InputGroup>
-        <br />
-        <InputGroup compact>
-        <AutoComplete
-            className="certain-category-search"
-            dataSource={dataSource}
-            dropdownClassName="certain-category-search-dropdown"
-            dropdownMatchSelectWidth={false}
-            style={{ width: '50%' }}
-            // onChange={this.handleChange}
-            filterOption={(inputValue, option) =>
-                option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
-              }
-            placeholder="Source"
-          />
-        </InputGroup>
-        <br />
-        <InputGroup compact>
-        <Input style={{ width: '50%' }} placeholder="Page" />
-        </InputGroup>
-        <br />
-        <TextArea
-            placeholder="Entry"
-            autosize={{ minRows: 2, maxRows: 8 }} 
-            type="text"    
-            name='event'
-            value={this.state.event} 
-            onChange={e => this.change(e)}
+            <AutoComplete
+                dataSource={sottCategories}
+                style={{ width: '50%' }}
+                onChange={this.handleChange}
+                placeholder="SOTT Category"
+                filterOption={(inputValue, option) =>
+                    option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+                }
             />
-        <br />
-        <br />
+            <AutoComplete
+                className="certain-category-search"
+                dataSource={eventData}
+                dropdownClassName="certain-category-search-dropdown"
+                dropdownMatchSelectWidth={false}
+                style={{ width: '50%' }}
+                // onChange={this.handleChange}
+                filterOption={(inputValue, option) =>
+                    option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+                }
+                placeholder="Event"
+            />
+        </InputGroup>
+    <br />
+        <InputGroup compact>
+            <AutoComplete
+                className="certain-category-search"
+                dataSource={originatingData}
+                dropdownClassName="certain-category-search-dropdown"
+                dropdownMatchSelectWidth={false}
+                style={{ width: '50%' }}
+                // onChange={this.handleChange}
+                filterOption={(inputValue, option) =>
+                    option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+                }
+                placeholder="Originating"
+            />
+            <AutoComplete
+                className="certain-category-search"
+                dataSource={targetData}
+                dropdownClassName="certain-category-search-dropdown"
+                dropdownMatchSelectWidth={false}
+                style={{ width: '50%' }}
+                // onChange={this.handleChange}
+                filterOption={(inputValue, option) =>
+                    option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+                }
+                placeholder="Target"
+            />
+        </InputGroup>
+    <br />
+        <InputGroup compact>
+            <AutoComplete
+                className="certain-category-search"
+                dataSource={sourceData}
+                dropdownClassName="certain-category-search-dropdown"
+                dropdownMatchSelectWidth={false}
+                style={{ width: '50%' }}
+                // onChange={this.handleChange}
+                filterOption={(inputValue, option) =>
+                    option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+                }
+                placeholder="Source"
+            />
+        </InputGroup>
+    <br />
+        <InputGroup compact>
+            <Input style={{ width: '50%' }} placeholder="Page" />
+        </InputGroup>
+    <br />
+            <TextArea
+                placeholder="Entry"
+                autosize={{ minRows: 2, maxRows: 8 }} 
+                type="text"    
+                name='event'
+                value={this.state.event} 
+                onChange={e => this.change(e)}
+                />
+    <br />
+    <br />
             {/* <div className="form-group">
                 <label htmlFor="exampleInput">Date</label>
                 <input type="text"
