@@ -13,27 +13,17 @@ class InputPage extends React.Component {
         super();
         this.state={
             sottlab:'',
-            // date:'',
-            // entry:'',
-            // century:'',
-            // event:'',
-            // category:'',
-            // originating:'',
-            // target:'',
-            // source:'',
-            // page:'',
+            date:'',
+            entry:'',
+            century:'',
+            event:'',
+            category:'',
+            originating:'',
+            target:'',
+            source:'',
+            page:'',
         }
     }
-
-    componentDidMount() {
-        axios.get('/.netlify/functions/getData')
-        .then((response) => {this.setState({sottlab: response.data})
-        console.log(response.data)
-     }) 
-         .catch(error => {
-             console.error(error)
-           })
-       }
 
     change = (e) => {
         this.setState({
@@ -54,50 +44,42 @@ class InputPage extends React.Component {
 
     render() {
         
-        let dataSource =[
-            this.state.sottlab.forEach((item) => {
-                let data = []    
-                var arr=[item.Event]
-                data.push(arr)
-            }
-            )
-        ]
-        
-        // const dataSource = 
-        //  [
-        //     "Capitalism",
-        //     "Revolution",
-        //     "Banking",
-        //     "Censorship and Surveillance",
-        //     "Colonization",
-        //     "Communism",
-        //     "Christianity",
-        //     "Coup D'etat",
-        //     "Balkans Conflict",
-        //     "Dionysus Syndrome",
-        //     "Elections",
-        //     "Energy Crisis",
-        //     "Esoterica",
-        //     "Evolution of Deep State",
-        //     "Food Shortages",
-        //     "Foundation of Israel",
-        //     "Global Arms Trade",
-        //     "Greek Religion",
-        //     "Gun Control",
-        //     "Ice Age",
-        //     "ID vs Darwinian Evolution",
-        //     "International Finance",
-        //     "Iran Contra",
-        //     "Iran Scare",
-        //     "Islam",
-        //     "Israel Lobby",
-        //     "Israel-Palestine Conflict",
-        //     "JFK Assassination",
-        //     "Judaism",
-        //     "Jung Cult",
-        //     "Korean War",
-        //     "Lead-up to World War I",
-        //  ]
+                
+        const dataSource = 
+         [
+            "Capitalism",
+            "Revolution",
+            "Banking",
+            "Censorship and Surveillance",
+            "Colonization",
+            "Communism",
+            "Christianity",
+            "Coup D'etat",
+            "Balkans Conflict",
+            "Dionysus Syndrome",
+            "Elections",
+            "Energy Crisis",
+            "Esoterica",
+            "Evolution of Deep State",
+            "Food Shortages",
+            "Foundation of Israel",
+            "Global Arms Trade",
+            "Greek Religion",
+            "Gun Control",
+            "Ice Age",
+            "ID vs Darwinian Evolution",
+            "International Finance",
+            "Iran Contra",
+            "Iran Scare",
+            "Islam",
+            "Israel Lobby",
+            "Israel-Palestine Conflict",
+            "JFK Assassination",
+            "Judaism",
+            "Jung Cult",
+            "Korean War",
+            "Lead-up to World War I",
+         ]
        
         const sottCategories = [
             "Puppet Masters",
