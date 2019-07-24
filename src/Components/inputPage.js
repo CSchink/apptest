@@ -93,11 +93,7 @@ class InputPage extends React.Component {
             "Science of the Spirit",
             "Science and Technology"
         ]
-        handleSearch = value => {
-            this.setState({
-              dataSource: !value ? [] : [value, value + value, value + value + value],
-            });
-          };
+
         return (
             <div>
             <JumbotronPage text="SOTT Lab - Data Entry" />
@@ -131,7 +127,7 @@ class InputPage extends React.Component {
           />
         <AutoComplete
             className="certain-category-search"
-            dataSource={options}
+            dataSource={dataSource}
             dropdownClassName="certain-category-search-dropdown"
             dropdownMatchSelectWidth={false}
             style={{ width: '50%' }}
