@@ -8,7 +8,7 @@ class ButtonUp extends React.Component{
     <BackTop>
       <div className="ant-back-top-inner">UP</div>
     </BackTop>
-    <strong style={{ color: '#1088e9' }}></strong>
+    <strong style={{ size: "40px 40px", color: '#1088e9' }}></strong>
   </div>
 )
 }
