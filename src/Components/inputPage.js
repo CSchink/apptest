@@ -44,8 +44,24 @@ class InputPage extends React.Component {
 
     render() {
         
-                
-        const dataSource = 
+        const targetData = [
+            "United States",
+            "England",
+            "Russia",
+            "China",
+            "Thailand"
+        ]
+        const sourceData = [
+            "Sott.net",
+        ]
+        const originatingData = [
+            "United States",
+            "England",
+            "Russia",
+            "China",
+            "Thailand"
+        ]        
+        const eventData = 
          [
             "Capitalism",
             "Revolution",
@@ -124,7 +140,7 @@ class InputPage extends React.Component {
           />
         <AutoComplete
             className="certain-category-search"
-            dataSource={dataSource}
+            dataSource={eventData}
             dropdownClassName="certain-category-search-dropdown"
             dropdownMatchSelectWidth={false}
             style={{ width: '50%' }}
@@ -137,12 +153,45 @@ class InputPage extends React.Component {
         </InputGroup>
         <br />
         <InputGroup compact>
-        <Input style={{ width: '50%' }} placeholder="Originating" />
-        <Input style={{ width: '50%' }} placeholder="Target" />
+        <AutoComplete
+            className="certain-category-search"
+            dataSource={originatingData}
+            dropdownClassName="certain-category-search-dropdown"
+            dropdownMatchSelectWidth={false}
+            style={{ width: '50%' }}
+            // onChange={this.handleChange}
+            filterOption={(inputValue, option) =>
+                option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+              }
+            placeholder="Originating"
+          />
+          <AutoComplete
+            className="certain-category-search"
+            dataSource={targetData}
+            dropdownClassName="certain-category-search-dropdown"
+            dropdownMatchSelectWidth={false}
+            style={{ width: '50%' }}
+            // onChange={this.handleChange}
+            filterOption={(inputValue, option) =>
+                option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+              }
+            placeholder="Target"
+          />
         </InputGroup>
         <br />
         <InputGroup compact>
-        <Input style={{ width: '100%' }} placeholder="Source" />
+        <AutoComplete
+            className="certain-category-search"
+            dataSource={dataSource}
+            dropdownClassName="certain-category-search-dropdown"
+            dropdownMatchSelectWidth={false}
+            style={{ width: '50%' }}
+            // onChange={this.handleChange}
+            filterOption={(inputValue, option) =>
+                option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+              }
+            placeholder="Source"
+          />
         </InputGroup>
         <br />
         <InputGroup compact>
