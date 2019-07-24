@@ -10,7 +10,7 @@ import SottDashBoard from './Components/sottdashboards';
 import SottTable from './Components/sottTable';
 import InputPage from './Components/inputPage';
 import LoginForm from './Components/Login';
-import TutorialPage from './Components/TutorialPage';
+import TutorialPage from './Components/tutorialPage';
 
 class App extends Component {
   render() { 
