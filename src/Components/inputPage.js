@@ -2,24 +2,28 @@ import React from 'react';
 // import {MDBContainer, MDBBtn } from 'mdbreact';
 import { Input, Button, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
 import JumbotronPage from './jumbotron';
-
+import axios from 'axios';
 const { TextArea } = Input;
 const InputGroup = Input.Group;
 const { Option, OptGroup } = AutoComplete;
 
   
 class InputPage extends React.Component {
-    state={
-        dataSource:'',
-        date:'',
-        entry:'',
-        century:'',
-        event:'',
-        category:'',
-        originating:'',
-        target:'',
-        source:'',
-        page:'',
+    
+    constructor(props) {
+        super(props);
+        this.state={
+            dataSource:'',
+            date:'',
+            entry:'',
+            century:'',
+            event:'',
+            category:'',
+            originating:'',
+            target:'',
+            source:'',
+            page:'',
+        }
     }
 
 
@@ -29,15 +33,15 @@ class InputPage extends React.Component {
         });
     }
     
-    // componentDidMount() {
-    //     axios.get('/.netlify/functions/getData')
-    //     .then((response) => {this.setState({dataSource: response.data})
-    //     console.log(response.data)
-    //  }) 
-    //      .catch(error => {
-    //          console.error(error)
-    //        })
-    //    }
+    componentDidMount() {
+        axios.get('/.netlify/functions/getData')
+        .then((response) => {this.setState({dataSource: response.data})
+        console.log(response.data)
+     }) 
+         .catch(error => {
+             console.error(error)
+           })
+       }
     //    let data = []  
     //   const sottData = this.state.dataSource.forEach((item) => {
     //         var arr=[item.Event]
