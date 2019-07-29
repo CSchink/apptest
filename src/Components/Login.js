@@ -22,12 +22,12 @@ class Login extends React.Component {
 
     onSubmit = (event) => {
     event.preventDefault();
-    axios.get('/.netlify/functions/authenticate', {
+    fetch('/.netlify/functions/authenticate', {
         method: 'POST',
         body: JSON.stringify(this.state),
-        // headers: {
-        // 'Content-Type': 'application/json'
-        // }
+        headers: {
+        'Content-Type': 'application/json'
+        }
     })
     .then(res => {
         if (res.status === 200) {
