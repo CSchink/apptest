@@ -47,7 +47,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
   const collection = client.db("sottlab").collection("logindata");
   // perform actions on the collection object
-  logindata.pre('save', function(next) {
+  collection.pre('save', function(next) {
     if (this.isNew || this.isModified('password')) {
       const document = this;
       bcrypt.hash(this.password, saltRounds, function(err, hashedPassword) {
@@ -62,7 +62,7 @@ client.connect(err => {
       next();
     }
   });
-logindata.methods.isCorrectPassword = function(password, callback) {
+collection.methods.isCorrectPassword = function(password, callback) {
     bcrypt.compare(password, this.password, function(err, same) {
         if (err) {
             callback(err);
@@ -72,7 +72,7 @@ logindata.methods.isCorrectPassword = function(password, callback) {
     })
 }
   const { user , password } = req.body;
-logindata.findOne({ user }, function(err, user) {
+collection.findOne({ user }, function(err, user) {
   if (err) {
     console.error(err);
     res.status(500)
@@ -85,7 +85,7 @@ logindata.findOne({ user }, function(err, user) {
       error: 'Incorrect email or password'
     });
   } else {
-    logindata.isCorrectPassword(password, function(err, same) {
+    collection.isCorrectPassword(password, function(err, same) {
       if (err) {
         res.status(500)
           .json({
