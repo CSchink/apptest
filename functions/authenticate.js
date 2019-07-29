@@ -27,11 +27,11 @@ exports.handler = function(event, context, callback) {
           bufferCommands: false,
           bufferMaxEntries: 0
         });
-        conn.model('logindata', mongoose.Schema(
+        conn.model('sottlab', mongoose.Schema(
           {collection:'logindata'} ));
       }
-    const { username, password } = req.body;
-    User.findOne({ username }, function(err, user) {
+    const { user , password } = req.body;
+    logindata.findOne({ user }, function(err, user) {
       if (err) {
         console.error(err);
         res.status(500)
@@ -44,7 +44,7 @@ exports.handler = function(event, context, callback) {
           error: 'Incorrect email or password'
         });
       } else {
-        user.isCorrectPassword(password, function(err, same) {
+        logindata.isCorrectPassword(password, function(err, same) {
           if (err) {
             res.status(500)
               .json({

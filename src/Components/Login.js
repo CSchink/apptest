@@ -39,7 +39,7 @@ class Login extends React.Component {
     })
     .catch(err => {
         console.error(err);
-        alert('Error logging in please try again');
+        alert('I am a magician');
     });
     }
     render() {
@@ -56,6 +56,7 @@ class Login extends React.Component {
               <Input
                 prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
                 placeholder="Username"
+                value={this.state.user}
                 onChange={this.handleInputChange}
               />,
             )}
