@@ -66,5 +66,13 @@ exports.handler = function(event, context, callback) {
         });
       }
     });
-  });
+    const M = conn.model('logindata');
+
+    const doc = yield M.find();
+    const response = {
+      statusCode: 200,
+      body: JSON.stringify(doc)
+    };
+    return response;  
+});
 }

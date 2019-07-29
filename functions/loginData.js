@@ -57,6 +57,7 @@ exports.handler = function(event, context, callback) {
         }
       });
     }
+
     const M = conn.model('logindata');
 
     const doc = yield M.find();
