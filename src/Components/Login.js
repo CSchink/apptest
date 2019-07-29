@@ -83,7 +83,7 @@ class Login extends React.Component {
               Log in
             </Button>
             <br />
-            <a className="login-form-forgot" href="">
+            <a className="login-form-forgot">
               Forgot password?
             </a> <br />
             <a href="">Register now!</a>
