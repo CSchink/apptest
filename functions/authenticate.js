@@ -27,7 +27,7 @@ exports.handler = function(event, context, callback) {
           bufferCommands: false,
           bufferMaxEntries: 0
         });
-        conn.model('sottlab', mongoose.Schema(
+        conn.model('logindata', mongoose.Schema(
           {collection:'logindata'} ));
       }
     const { username, password } = req.body;
