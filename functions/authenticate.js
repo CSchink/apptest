@@ -32,7 +32,17 @@ exports.handler = function(event, context, callback) {
         },
         {collection:'logindata'} ));
       }
-    const { user , password } = req.body;
+    
+    logindata.methods.isCorrectPassword = function(password, callback) {
+        bcrypt.compare(password, this.password, function(err, same) {
+            if (err) {
+                callback(err);
+            } else {
+                callback(err, same);
+            }
+        })
+    }
+      const { user , password } = req.body;
     logindata.findOne({ user }, function(err, user) {
       if (err) {
         console.error(err);
