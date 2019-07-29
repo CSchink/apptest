@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
-const User = require('./models/User');
 const bcrypt = require('bcrypt');
 
 const dbUrl = 'mongodb+srv://dbCorey:MVDhmYhNQkp2y8T@cluster0-ymebw.mongodb.net/test?retryWrites=true&w=majority'
@@ -19,7 +18,7 @@ exports.handler = function(event, context, callback) {
       catch(error => callback(error));
   };
 
-  loginConnect = () => {
+  function run() {
     return co(function*() {
   
       if (conn == null) {
@@ -28,7 +27,7 @@ exports.handler = function(event, context, callback) {
           bufferMaxEntries: 0
         });
         conn.model('logindata', mongoose.Schema({
-        username: { type: String, required: true, unique: true },
+        user: { type: String, required: true, unique: true },
         password: { type: String, required: true },
         },
         {collection:'logindata'} ));
@@ -60,7 +59,7 @@ exports.handler = function(event, context, callback) {
             });
           } else {
             // Issue token
-            const payload = { username };
+            const payload = { user };
             const token = jwt.sign(payload, secret, {
               expiresIn: '1h'
             });
