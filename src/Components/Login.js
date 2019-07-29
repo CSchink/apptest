@@ -22,7 +22,7 @@ class Login extends React.Component {
 
     onSubmit = (event) => {
     event.preventDefault();
-    axios.get('/.netlify/functions/authenticate', {
+    axios.post('/.netlify/functions/authenticate', {
         method: 'POST',
         body: JSON.stringify(this.state),
         headers: {
