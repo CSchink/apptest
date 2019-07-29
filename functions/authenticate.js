@@ -45,7 +45,7 @@ exports.handler = function(event, context, callback) {
 
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
-  const collection = client.db("sottlab").collection("logindata");
+  const collection = client.db("logindata").collection("logindata");
   // perform actions on the collection object
   collection.pre('save', function(next) {
     if (this.isNew || this.isModified('password')) {
