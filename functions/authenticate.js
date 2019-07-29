@@ -6,7 +6,7 @@ const mongoose = require('mongoose');
 const User = require('./models/User');
 const bcrypt = require('bcrypt');
 
-const dbUrl = 'mongodb+srv://dbCorey:MVDhmYhNQkp2y8T@cluster0-ymebw.mongodb.net/sottlab?retryWrites=true&w=majority'
+const dbUrl = 'mongodb+srv://dbCorey:MVDhmYhNQkp2y8T@cluster0-ymebw.mongodb.net/test?retryWrites=true&w=majority'
 
 exports.handler = function(event, context, callback) {
 
@@ -27,8 +27,11 @@ exports.handler = function(event, context, callback) {
           bufferCommands: false,
           bufferMaxEntries: 0
         });
-        conn.model('sottlab', mongoose.Schema(
-          {collection:'logindata'} ));
+        conn.model('logindata', mongoose.Schema({
+        username: { type: String, required: true, unique: true },
+        password: { type: String, required: true },
+        },
+        {collection:'logindata'} ));
       }
     const { user , password } = req.body;
     logindata.findOne({ user }, function(err, user) {
