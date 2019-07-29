@@ -2,6 +2,7 @@ import React from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import JumbotronPage from './jumbotron';
 import axios from 'axios';
+import fetch from 'whatwg-fetch';
 
 
 class Login extends React.Component {
@@ -22,7 +23,7 @@ class Login extends React.Component {
 
     onSubmit = (event) => {
     event.preventDefault();
-    axios.post('/.netlify/functions/authenticate', {
+    fetch('/.netlify/functions/authenticate', {
         method: 'POST',
         body: JSON.stringify(this.state),
         headers: {
