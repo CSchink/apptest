@@ -77,7 +77,8 @@ function run() {
   page: {
       Type: String
   }, 
-  }, { collection : 'sottlab' }   ));
+  }, 
+  { collection : 'sottlab' }   ));
     }
 
     const M = conn.model('sottlab');
