@@ -22,7 +22,7 @@ class Login extends React.Component {
 
     onSubmit = (event) => {
     event.preventDefault();
-    fetch('/.netlify/functions/loginData', {
+    fetch('/.netlify/functions/authenticate', {
         method: 'POST',
         body: JSON.stringify(this.state),
         headers: {
