@@ -9,102 +9,30 @@ const dbUrl = 'mongodb+srv://dbCorey:QCNrQNjjEncV8fT@cluster1-e2c8k.mongodb.net/
 
 exports.handler = function(event, context, callback) {
 
-    context.callbackWaitsForEmptyEventLoop = false;
-    const client = new MongoClient(uri, { useNewUrlParser: true });
-    client.connect(err => {
-      const collection = client.db("logindata").collection("logindata");
-      // perform actions on the collection object
-      collection.pre('save', function(next) {
-        if (this.isNew || this.isModified('password')) {
-          const document = this;
-          bcrypt.hash(this.password, saltRounds, function(err, hashedPassword) {
-            if (err) {
-              next(err);
-            } else {
-              document.password = hashedPassword;
-              next();
-            }
-          });
-        } else {
-          next();
-        }
-      });
-    collection.methods.isCorrectPassword = function(password, callback) {
-        bcrypt.compare(password, this.password, function(err, same) {
-            if (err) {
-                callback(err);
-            } else {
-                callback(err, same);
-            }
-        })
-    }
-      const { user , password } = req.body;
-    collection.findOne({ user }, function(err, user) {
-      if (err) {
-        console.error(err);
-        res.status(500)
-          .json({
-          error: 'Internal error please try again'
-        });
-      } else if (!user) {
-        res.status(401)
-          .json({
-          error: 'Incorrect email or password'
-        });
-      } else {
-        collection.isCorrectPassword(password, function(err, same) {
-          if (err) {
-            res.status(500)
-              .json({
-              error: 'Internal error please try again'
-            });
-          } else if (!same) {
-            res.status(401)
-              .json({
-              error: 'Incorrect email or password'
-            });
-          } else {
-            // Issue token
-            const payload = { user };
-            const token = jwt.sign(payload, secret, {
-              expiresIn: '1h'
-            });
-            res.cookie('token', token, { httpOnly: true }).sendStatus(200);
-          }
-        });
-      }
-    });
-    
-      client.close();
-    });
-   
-  };
-
-//   function run() {
-//     return co(function*() {
+    function run() {
+    return co(function*() {
   
-//       if (conn == null) {
-//         conn = yield mongoose.createConnection(dbUrl, {
-//           bufferCommands: false,
-//           bufferMaxEntries: 0
-//         });
-//         conn.model('logindata', mongoose.Schema({
-//         user: { type: String, required: true, unique: true },
-//         password: { type: String, required: true },
-//         },
-//         {collection:'logindata'} ));
-//       }
-//     const M = conn.model('logindata');
-
-//     const doc = yield M.find();
-//     const response = {
-//       statusCode: 200,
-//       body: JSON.stringify(doc)
-//     };
-//     return response;  
-// });
-// }
-
+      if (conn == null) {
+        conn = yield mongoose.createConnection(dbUrl, {
+          bufferCommands: false,
+          bufferMaxEntries: 0
+        });
+        conn.model('logindata', mongoose.Schema({
+        user: { type: String, required: true, unique: true },
+        password: { type: String, required: true },
+        },
+        {collection:'logindata'} ));
+      }
+    const M = conn.model('logindata');
+    const doc = yield M.find();
+    const response = {
+      statusCode: 200,
+      body: JSON.stringify(doc)
+    };
+    return response;  
+});
+}
+}
 
 
 

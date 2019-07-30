@@ -39,7 +39,7 @@ class Login extends React.Component {
     })
     .catch(err => {
         console.error(err);
-        alert('I am a magician');
+        alert('Incorrect username or password');
     });
     }
     render() {
