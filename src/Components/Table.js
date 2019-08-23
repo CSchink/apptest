@@ -160,7 +160,6 @@ class Table extends Component {
             
             return (
             <div>
-            <TagList />
             <MuiThemeProvider theme={newTheme}>
                 <MUIDataTable
                             columns={columns}
