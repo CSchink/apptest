@@ -1,7 +1,6 @@
 import React from 'react';
 import { Input, Button, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
 import JumbotronPage from './jumbotron';
-import axios from 'axios';
 const { TextArea } = Input;
 const InputGroup = Input.Group;
 const { Option, OptGroup } = AutoComplete;
@@ -12,7 +11,6 @@ class InputPage extends React.Component {
     constructor() {
         super();
         this.state={
-            sottlab:'',
             date:'',
             entry:'',
             century:'',

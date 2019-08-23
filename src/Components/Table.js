@@ -55,7 +55,8 @@ class Table extends Component {
                 label: "Date",
                 options:{
                     filter: false,
-                    sort: asc,
+                    sort: true,
+                    sortDirection: 'asc'
                 }
             },
             {
