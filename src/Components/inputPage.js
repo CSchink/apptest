@@ -63,7 +63,6 @@ class InputPage extends React.Component {
             "Capitalism",
             "Revolution",
             "Banking",
-            "Censorship and Surveillance",
             "Colonization",
             "Communism",
             "Christianity",
@@ -72,42 +71,29 @@ class InputPage extends React.Component {
             "Dionysus Syndrome",
             "Elections",
             "Energy Crisis",
-            "Esoterica",
-            "Evolution of Deep State",
-            "Food Shortages",
-            "Foundation of Israel",
-            "Global Arms Trade",
             "Greek Religion",
-            "Gun Control",
             "Ice Age",
-            "ID vs Darwinian Evolution",
+            "Evolution",
             "International Finance",
-            "Iran Contra",
-            "Iran Scare",
-            "Islam",
-            "Israel Lobby",
-            "Israel-Palestine Conflict",
-            "JFK Assassination",
             "Judaism",
-            "Jung Cult",
-            "Korean War",
-            "Lead-up to World War I",
+            "Jung",
+            "Korean War"
          ]
        
-        const sottCategories = [
-            "Puppet Masters",
-            "Society's Child",
-            "Earth Changes",
-            "Fire in the Sky",
-            "Health and Wellness",
-            "Secret History",
-            "Science of the Spirit",
-            "Science and Technology"
+        const Categories = [
+            "Myth and Religion",
+            "Science",
+            "Military",
+            "Climate",
+            "Health",
+            "Politics",
+            "Economics",
+            "Technology"
         ]
 
     return (
         <div>
-            <JumbotronPage text="SOTT Lab - Data Entry" />
+            <JumbotronPage text="History Database - Data Entry" />
         <div style={{margin: "30px auto", 
             boxSizing: "border-box", 
             width: "600px", 
@@ -130,7 +116,7 @@ class InputPage extends React.Component {
                         dataSource={sottCategories}
                         style={{ width: '50%' }}
                         onChange={this.handleChange}
-                        placeholder="SOTT Category"
+                        placeholder="Category"
                         filterOption={(inputValue, option) =>
                             option.props.children.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
                         }
