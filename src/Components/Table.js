@@ -56,7 +56,7 @@ class Table extends Component {
                 options:{
                     filter: false,
                     sort: true,
-                    sortDirection: 'asc'
+                    sortDirection: 'desc'
                 }
             },
             {
