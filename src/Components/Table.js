@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import MUIDataTable from "mui-datatables";
-import TagList from './TagList'
-
-
 import {
     createMuiTheme,
     MuiThemeProvider,
@@ -58,7 +55,7 @@ class Table extends Component {
                 label: "Date",
                 options:{
                     filter: false,
-                    sort: true,
+                    sort: asc,
                 }
             },
             {
@@ -86,15 +83,6 @@ class Table extends Component {
                }
             },
             {
-                name: 'category',
-                label: 'Category',
-                options: {
-                    filter: true,
-                    sort: false,
-                    display: false,
-                   }
-                },
-            {
             name: 'originating',
             label: 'Originating',
             options: {
@@ -112,14 +100,6 @@ class Table extends Component {
                 display: false,
                }
             },
-            // {
-            //     name: "regionb",
-            //     label: 'RegionB',
-            //     options: {
-            //         filter: true,
-            //         sort: false,
-            //        }
-            //     },
             {
                 name: "source",
                 label: 'Source',
@@ -147,7 +127,6 @@ class Table extends Component {
                     item.Entry,
                     item.Century,
                     item.Event,
-                    item.Category,
                     item.Originating,
                     item.Target,
                     item.Source,
