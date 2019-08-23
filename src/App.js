@@ -1,13 +1,10 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
-// import "@fortawesome/fontawesome-free/css/all.min.css";
-// import "bootstrap-css-only/css/bootstrap.min.css";
-// import "mdbreact/dist/css/mdb.css";
 import 'antd/dist/antd.css';
 
-import SottDashBoard from './Components/sottdashboards';
-import SottTable from './Components/sottTable';
+import Dashboard from './Components/dashboards';
+import Table from './Components/Table';
 import InputPage from './Components/inputPage';
 import LoginForm from './Components/Login';
 import TutorialPage from './Components/tutorialPage';
@@ -18,17 +15,8 @@ class App extends Component {
     <Router>
     
     <div>
-      {/* <nav className="navbar navbar-dark bg-primary">
-      <a className="navbar-brand" href="https://www.sott.net/">SOTT Lab</a>
-       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="true" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-       </button>
-      </nav> */}
-
-      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-            {/* <a className="navbar-brand" href="https://www.sott.net/" target="_blank">
-                          </a> */}
-            <Link to="/sottlab" className="navbar-brand">SOTT Lab</Link>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+            <Link to="/lab" className="navbar-brand">History Database</Link>
             <div className="collpase nav-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
@@ -47,10 +35,10 @@ class App extends Component {
             </div>
           </nav>
       
-      <Route path ="/dashboards" component ={SottDashBoard} />
+      <Route path ="/dashboards" component ={Dashboard} />
       <Route path="/input" component={InputPage} />
       <Route path="/" exact component ={LoginForm} />
-      <Route path="/sottlab" exact component ={SottTable} />
+      <Route path="/lab" exact component ={Table} />
       <Route path="/tutorial" component={TutorialPage} />
     </div>
     </Router>

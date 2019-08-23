@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import ReactDom from 'react';
 import axios from 'axios';
 import MUIDataTable from "mui-datatables";
 import TagList from './TagList'
-import { Icon, Button, Input, AutoComplete } from 'antd';
 
 
 import {
@@ -25,18 +23,18 @@ const newTheme = createMuiTheme({
       },
     },
 })
-class SottTable extends Component {
+class Table extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            sottlab: []     
+            historylab: []     
         };
     }
 
     componentDidMount() {
         axios.get('/.netlify/functions/getData')
-        .then((response) => {this.setState({sottlab: response.data})
+        .then((response) => {this.setState({historylab: response.data})
         console.log(response.data)
      }) 
          .catch(error => {
@@ -89,7 +87,7 @@ class SottTable extends Component {
             },
             {
                 name: 'category',
-                label: 'SOTT Category',
+                label: 'Category',
                 options: {
                     filter: true,
                     sort: false,
@@ -144,7 +142,7 @@ class SottTable extends Component {
             
         var data=[]
         console.log(this.state);
-        this.state.sottlab.forEach((item) => {
+        this.state.historylab.forEach((item) => {
             var arr=[moment(item.Date).format('YYYY DD MMMM'),
                     item.Entry,
                     item.Century,
@@ -156,11 +154,6 @@ class SottTable extends Component {
                     item.Page
                 ]
             data.push(arr)
-            // {
-            //     date: moment(item.Date).calendar(),
-            //     // entry: item.Entry,
-            //     century: item.Century
-            // })
             })
             console.log(data)
         
@@ -187,4 +180,4 @@ class SottTable extends Component {
 }
 }
 
-export default SottTable;
+export default Table;
