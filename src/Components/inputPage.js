@@ -113,7 +113,7 @@ class InputPage extends React.Component {
             <br />
                 <InputGroup compact>
                     <AutoComplete
-                        dataSource={sottCategories}
+                        dataSource={Categories}
                         style={{ width: '50%' }}
                         onChange={this.handleChange}
                         placeholder="Category"
