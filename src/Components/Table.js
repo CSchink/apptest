@@ -141,14 +141,13 @@ class Table extends Component {
             
             return (
             <div>
-            <Container><MuiThemeProvider theme={newTheme}>
+            <MuiThemeProvider theme={newTheme}>
                 <MUIDataTable
                             columns={columns}
                             data={data}
                             options={options}
                             />
             </MuiThemeProvider>
-            </Container>
             </div>
             // <MDBDataTable
             // autoWidth

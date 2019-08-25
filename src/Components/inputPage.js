@@ -91,7 +91,7 @@ class InputPage extends React.Component {
 
     return (
         <div>
-            <JumbotronPage text="History Database - Data Entry" />
+            <JumbotronPage text="History Database - Data Entry" color='#4287f5' />
         <div style={{margin: "30px auto", 
             boxSizing: "border-box", 
             width: "600px", 
