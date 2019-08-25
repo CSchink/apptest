@@ -6,7 +6,8 @@ import {
     MuiThemeProvider,
     withStyles
   } from "@material-ui/core/styles";
-
+  import '../App.css';
+ 
 var moment = require('moment');
 
 const newTheme = createMuiTheme({
