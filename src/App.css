@@ -32,10 +32,21 @@
   }
 }
 
-body .MUIDataTable-responsiveScroll-851 {
+/* body .MUIDataTable-responsiveScroll-851 {
   max-height: 100% !important;
-}
+} */
 
 #components-form-demo-normal-login .login-form {
   max-width: 300px;
+}
+
+#components-form-demo-normal-login .login-form-forgot {
+  float: right;
+}
+#components-form-demo-normal-login .login-form-button {
+  width: 100%;
+}
+
+body {
+  text-align: center;
 }
