@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import YoutubeId from './youtube'
 import JumbotronPage from './jumbotron';
-import { Layout, Menu } from 'antd';
+import { Layout } from 'antd';
 
 
 const { Header, Footer, Content } = Layout;
