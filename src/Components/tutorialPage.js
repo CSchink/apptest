@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import YoutubeId from './youtube'
 import JumbotronPage from './jumbotron';
 import { Layout, Menu } from 'antd';
-import '../App.css';
+
 
 const { Header, Footer, Content } = Layout;
 
@@ -13,7 +13,7 @@ render() {
 return(
   <div>
     <JumbotronPage text="History Database Tutorial"/>
-    <Layout className="layout">
+    <Layout>
       <Header>Welcome to the home of the future Tutorial Page</Header>
       <Content>Welcome to the home of the future Tutorial Page</Content>
       <Content>Here we'd like to introduce you to the general vision for the Global History Database</Content>

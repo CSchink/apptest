@@ -9,7 +9,7 @@ class JumbotronPage extends React.Component {
       <MDBRow>
         <MDBCol>
           <MDBJumbotron style={{ padding: 0 }}>
-            <MDBCol className="text-black text-center py-5 px-4 my-3" style={{ backgroundImage: `url(https://assets.rbl.ms/12290241/origin.jpg)` }}>
+            <MDBCol className="text-white text-center py-5 px-6 my-3" style={{ backgroundImage: `url(https://assets.rbl.ms/12290241/origin.jpg)` }}>
               <MDBCol className="py-5">
                 <MDBCardTitle className="h1-responsive pt-3 m-5 font-bold">{this.props.text}</MDBCardTitle>
                 {/* <MDBBtn outline color="black" className="mb-5"><MDBIcon icon="clone" className="mr-2"></MDBIcon>View Tutorial</MDBBtn> */}
