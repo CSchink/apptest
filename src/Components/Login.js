@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import JumbotronPage from './jumbotron';
 import axios from 'axios';
-import '../App.css';
+
 
 
 class Login extends React.Component {
@@ -46,7 +46,7 @@ class Login extends React.Component {
     render() {
       const { getFieldDecorator } = this.props.form;
       return (
-          <div><JumbotronPage text="Global History Database - Login" />
+          <div><JumbotronPage text="Database Login" />
           <div style={{  margin: "30px auto", boxSizing: "border-box", width: "500px", minHeight: "200px", alignItem: 'center', padding: "10px 20px"}}>
               <p>Please sign in below</p>
         <Form onSubmit={this.onSubmit} className="login-form">
