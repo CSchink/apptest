@@ -22,7 +22,7 @@ class App extends Component {
                   <Link to="/" className="nav-link">Login</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/dashboards" className="nav-link">Dashboards</Link>
+                  <Link to="/dashboards" className="nav-link">Statistics</Link>
                 </li>
                 <li className="navbar-item">
                   <Link to="/input" className="nav-link">Input</Link>
