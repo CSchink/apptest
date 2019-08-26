@@ -1,3 +1,5 @@
+export default TutorialPage;
+
 import React, { Component } from 'react';
 import YoutubeId from './youtube'
 import JumbotronPage from './jumbotron';
@@ -21,11 +23,7 @@ return(
         <Layout>
           <Header style={{ background: '#ffffff'}}>Here we'll introduce you to the vision for the Global History Database</Header>
           <Layout>
-            <Sider style={{ background: '#ffffff'}}><h2>Video Tutorial</h2>
-            <br />
-            <p>That said, below will be (someday soon) a tutorial video explaining how it all works together</p>
-            <br />
-            <p><YoutubeId source=''/></p></Sider>
+            <Sider style={{ background: '#ffffff'}}></Sider>
             <Content style={{ background: '#ffffff'}}><h2>Statistics</h2>
             <p>The Statistics section of History Lab will be geared toward social science investigations utilizing all quantitative data available through the Database</p>
             <h2>Database</h2>
