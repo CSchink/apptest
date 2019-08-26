@@ -16,13 +16,14 @@ render() {
 return(
   <div>
     <JumbotronPage text="History Database Tutorial"/>
-      <h1 style={{fontWeight: 'bold'}}>Welcome to the Global History Database</h1>
+      <h1>Welcome to the Global History Database</h1>
        <div style={{ background: '#ffffff'}}></div> 
         <Layout>
-          <Header style={{ background: '#ffffff'}}>Here we'll introduce you to the vision for the Global History Database</Header>
+          <Header style={{ background: '#ffffff'}}><h3>The vision for the Global History Database</h3></Header>
           <Layout>
             <Sider style={{ background: '#ffffff'}}></Sider>
-            <Content style={{ background: '#ffffff'}}><h2>Statistics</h2>
+            <Content style={{ background: '#ffffff'}}><h2 style={{ background: '#ffffff'}}>Statistics</h2>
+            <br />
             <p>The Statistics section of History Lab will be geared toward social science investigations utilizing all quantitative data available through the Database</p>
             <h2 style={{fontWeight: 'bold'}}>Database</h2>
             <br />
