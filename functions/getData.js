@@ -25,7 +25,7 @@ function run() {
         bufferCommands: false,
         bufferMaxEntries: 0
       });
-      conn.model('sottlab', mongoose.Schema({
+      conn.model('historylab', mongoose.Schema({
         date: {
       Type:Date
   },
@@ -78,10 +78,10 @@ function run() {
       Type: String
   }, 
   }, 
-  { collection : 'sottlab' }   ));
+  { collection : 'historylab' }   ));
     }
 
-    const M = conn.model('sottlab');
+    const M = conn.model('historylab');
 
     const doc = yield M.find();
     const response = {
@@ -92,4 +92,3 @@ function run() {
   });
 }
 
-// module.exports = mongoose.model.sottlab;          
