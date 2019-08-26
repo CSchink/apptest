@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import YoutubeId from './youtube'
 import JumbotronPage from './jumbotron';
-import '../App.css';
 import 'antd/dist/antd.css';
 import { Layout } from 'antd';
 
@@ -25,7 +24,7 @@ return(
             <br />
             <p>That said, below will be (someday soon) a tutorial video explaining how it all works together</p>
             <br />
-            <p><YoutubeId source='https://www.youtube.com/embed/MckxlP60cnY'/></p></Sider>
+            <p><YoutubeId source=''/></p></Sider>
             <Content><h2>Statistics</h2>
             <p>The Statistics section of History Lab will be geared toward social science investigations utilizing all quantitative data available through the Database</p>
             <h2>Database</h2>
