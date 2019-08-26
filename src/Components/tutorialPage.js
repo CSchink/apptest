@@ -4,11 +4,7 @@ import JumbotronPage from './jumbotron';
 import '../App.css';
 import { relative } from 'path';
 
-const styles = {
-  position: relative,
-  left:auto,
-  right:auto
-}
+
 
 class TutorialPage extends React.Component {
 
@@ -17,10 +13,10 @@ render() {
 return(
   <div>
     <JumbotronPage text="History Database Tutorial"/>
-      <div className={styles}>
-        <h1>Welcome to the home of the future Tutorial Page</h1>
+      <div>
+        <h1>Welcome to the Global History Database</h1>
         <br />
-        <p>Here we'll introduce you to the vision for the Global History Database</p>
+        <h3>Here we'll introduce you to the vision for the Global History Database</h3>
         <h2>Statistics</h2>
         <p>The Statistics section of History Lab will be geared toward social science investigations utilizing all quantitative data available through the Database</p>
         <h2>Database</h2>
