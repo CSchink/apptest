@@ -15,20 +15,21 @@ class App extends Component {
     
     <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-            <Link to="/lab" className="navbar-brand">History Database</Link>
+            <Link to="/lab" className="navbar-brand">Database</Link>
             <div className="collpase nav-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
                   <Link to="/" className="nav-link">Login</Link>
                 </li>
-                <li className="navbar-item">
-                  <Link to="/dashboards" className="nav-link">Statistics</Link>
-                </li>
+
                 <li className="navbar-item">
                   <Link to="/input" className="nav-link">Input</Link>
                 </li>
                 <li className="navbar-item">
                   <Link to="/tutorial" className="nav-link">Tutorial</Link>
+                </li>
+                <li className="navbar-item">
+                  <Link to="/dashboards" className="nav-link">Statistics</Link>
                 </li>
               </ul>
             </div>
