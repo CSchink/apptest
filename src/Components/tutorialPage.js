@@ -17,6 +17,7 @@ return(
   <div>
     <JumbotronPage text="History Database Tutorial"/>
       <h1>Welcome to the Global History Database</h1>
+       <div style={{ background: '#ffffff', padding: 24, minHeight: 280 }}></div> 
         <Layout>
           <Header>Here we'll introduce you to the vision for the Global History Database</Header>
           <Layout>
