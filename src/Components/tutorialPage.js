@@ -34,6 +34,7 @@ return(
             <li>Natural events like diseases, floods, volcanic eruptions, ice ages, and</li>
             <li>Individual branches of modern science like psychology, physics, and more</li>
             <br />
+            <h2 style={{ fontWeight: 'bold'}}>Video Tutorial Coming Soon!</h2>
             </Content>
           </Layout>
         </Layout>
