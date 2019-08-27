@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import YoutubeId from './youtube'
 import JumbotronPage from './jumbotron';
-import 'antd/dist/antd.css';
 import { Layout } from 'antd';
-
+import '../App.css'
 import { relative } from 'path';
 
 const { Header, Sider, Content } = Layout;
