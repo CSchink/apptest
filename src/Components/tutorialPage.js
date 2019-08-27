@@ -20,7 +20,7 @@ return(
       <br />
        <div style={{ background: '#ffffff'}}></div> 
         <Layout>
-          <Header style={{ background: '#ffffff'}}><h3>Here I present my vision for the Global History Database</h3></Header>
+          <Header style={{ background: '#ffffff'}}><h3><em>The Vision for the Global History Database</em></h3></Header>
           <Layout>
             <Sider style={{ background: '#ffffff'}}></Sider>
             <Content style={{ background: '#ffffff'}}><h2 style={{ fontWeight: 'bold'}}>Statistics</h2>
