@@ -22,10 +22,10 @@ return(
           <Header style={{ background: '#ffffff'}}><h3><em>The Vision for the Global History Database</em></h3></Header>
           <Layout>
             {/* <Sider style={{ background: '#4287f5'}}></Sider> */}
-            <Content style={{ background: '#ffffff'}}><h2 style={{ fontWeight: 'bold'}}>Statistics</h2>
+            <Content style={{ background: '#ffffff'}}><h2>Statistics</h2>
             <br />
             <p>The Statistics section of History Lab will be geared toward social science investigations utilizing all quantitative data available through the Database</p>
-            <h2 style={{fontWeight: 'bold'}}>Database</h2>
+            <h2>Database</h2>
             <br />
             <p>The Database will present a chronological view of world history, filtered through tags and categories for ease of understanding.  Think of it as a time machine that can instantly transport you across time and space with the click of a button!</p>
             <p>The Database will be filterable based on specific events, like World War I and other major historical events, as well as by major cultural and global attributes that are shared across time and space, such as:</p>
@@ -33,7 +33,7 @@ return(
             <li>Natural events like diseases, floods, volcanic eruptions, ice ages, and</li>
             <li>Individual branches of modern science like psychology, physics, and more</li>
             <br />
-            <h2 style={{ fontWeight: 'bold'}}>Video Tutorial Coming Soon!</h2>
+            <h2>Video Tutorial Coming Soon!</h2>
             </Content>
           </Layout>
         </Layout>
