@@ -19,8 +19,9 @@ body .MUIDataTable-responsiveScroll-851 {
 
 body {
   text-align: 'center';
-  width: 300px;
-  margin: auto;
+  position: 'relative';
+  left: 'auto';
+  right: 'auto';
 }
 
 h2 {
@@ -34,4 +35,3 @@ h2 {
   background-color: #4287f5;
   transform: rotate(0.8turn)
 }
-
