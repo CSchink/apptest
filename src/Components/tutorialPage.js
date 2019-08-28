@@ -21,7 +21,7 @@ return(
         <Layout>
           <Header style={{ background: '#ffffff'}}><h3><em>The Vision for the Global History Database</em></h3></Header>
           <Layout>
-            <Sider className='box'></Sider>
+            {/* <Sider className='box'></Sider> */}
             <Content style={{ background: '#ffffff'}}><h2>Statistics</h2>
             <br />
             <p>The Statistics section of History Lab will be geared toward social science investigations utilizing all quantitative data available through the Database</p>
