@@ -27,3 +27,11 @@ body {
 h2 {
   font-weight: bold;
 }
+
+.box {
+  margin: 30px;
+  width: 100px;
+  height: 100px;
+  background-color: #4287f5;
+  transform: rotate(0.8turn)
+}
