@@ -35,3 +35,7 @@ h2 {
   background-color: #4287f5;
   transform: rotate(0.8turn)
 }
+
+p {
+  margin: auto;
+}
