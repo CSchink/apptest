@@ -4,7 +4,7 @@ import JumbotronPage from './jumbotron';
 import { Layout } from 'antd';
 import '../App.css'
 import { relative } from 'path';
-
+import SottBigBalls from './navbar'
 const { Header, Sider, Content } = Layout;
 
 
@@ -14,7 +14,7 @@ render() {
 
 return(
   <div>
-    <JumbotronPage text="History Database Tutorial"/>
+    <SottBigBalls />
       <h1>Welcome to the Global History Database</h1>
       <br />
        <div style={{ background: '#ffffff'}}></div> 
