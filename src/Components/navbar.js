@@ -63,7 +63,6 @@ class SottBigBalls extends React.Component {
         </main>
         <Route path ="/dashboards" component ={Dashboard} />
       <Route path="/input" component={InputPage} />
-      <Route path="/" exact component ={SottBigBalls} />
       <Route path="/lab" exact component ={Table} />
       <Route path="/tutorial" component={TutorialPage} />
       <Route path="/login" component={LoginForm} />
