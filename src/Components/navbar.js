@@ -1,11 +1,11 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBContainer, MDBMask, MDBView } from 'mdbreact';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Dashboard from './Components/dashboards';
-import Table from './Components/Table';
-import InputPage from './Components/inputPage';
-import LoginForm from './Components/Login';
-import TutorialPage from './Components/tutorialPage';
+import Dashboard from './dashboards';
+import Table from './Table';
+import InputPage from './inputPage';
+import LoginForm from './Login';
+import TutorialPage from './tutorialPage';
 
 class SottBigBalls extends React.Component {
   constructor(props) {
