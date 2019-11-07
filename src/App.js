@@ -7,6 +7,7 @@ import Table from './Components/Table';
 import InputPage from './Components/inputPage';
 import LoginForm from './Components/Login';
 import TutorialPage from './Components/tutorialPage';
+import SottNav from './Components/navbar';
 
 class App extends Component {
   render() { 
@@ -14,7 +15,7 @@ class App extends Component {
     <Router>
     
     <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+        {/* <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <Link to="/lab" className="navbar-brand">SOTT Lab</Link>
             <div className="collpase nav-collapse">
               <ul className="navbar-nav mr-auto">
@@ -33,8 +34,8 @@ class App extends Component {
                 </li>
               </ul>
             </div>
-          </nav>
-      
+          </nav> */}
+      <SottNav />
       <Route path ="/dashboards" component ={Dashboard} />
       <Route path="/input" component={InputPage} />
       <Route path="/" exact component ={LoginForm} />
