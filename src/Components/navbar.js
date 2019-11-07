@@ -51,7 +51,7 @@ class SottBigBalls extends React.Component {
 
           <MDBView src="http://www.testnec.ro/wp-content/uploads/2019/01/imagine-2.jpg">
             <MDBMask overlay="black-light" className="flex-center flex-column text-white text-center">
-            <h1>Welcome to SOTT Lab, home of the greatest warriors known to the Cosmos</h1>
+            <h1>Welcome to SOTT Lab</h1>
             </MDBMask>
           </MDBView>
         </header>

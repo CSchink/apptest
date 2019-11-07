@@ -2,6 +2,7 @@ import React from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import JumbotronPage from './jumbotron';
 import axios from 'axios';
+import NormalNavBar from './normalnavbar'
 
 
 

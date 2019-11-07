@@ -1,6 +1,6 @@
 import React from 'react';
 import { Layout } from 'antd';
-import NormalNavBar from ',/normalnavbar'
+import NormalNavBar from './normalnavbar'
 
 const DashBoard = () => {
   return (

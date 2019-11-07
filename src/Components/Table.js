@@ -7,7 +7,7 @@ import {
     withStyles
   } from "@material-ui/core/styles";
   import '../App.css';
-import NormalNavBar from ',/normalnavbar'
+import NormalNavBar from './normalnavbar'
 var moment = require('moment');
 
 const newTheme = createMuiTheme({

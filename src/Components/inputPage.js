@@ -4,7 +4,7 @@ import JumbotronPage from './jumbotron';
 const { TextArea } = Input;
 const InputGroup = Input.Group;
 const { Option, OptGroup } = AutoComplete;
-import NormalNavBar from ',/normalnavbar'
+import NormalNavBar from './normalnavbar'
 
   
 class InputPage extends React.Component {
