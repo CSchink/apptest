@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import 'antd/dist/antd.css';
 
-import Dashboard from './Components/dashboards';
-import Table from './Components/Table';
-import InputPage from './Components/inputPage';
-import LoginForm from './Components/Login';
-import TutorialPage from './Components/tutorialPage';
+import Dashboard from './dashboards';
+import Table from './Table';
+import InputPage from './inputPage';
+import LoginForm from './Login';
+import TutorialPage from './tutorialPage';
 
 class NormalNavbar extends Component {
 
