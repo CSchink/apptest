@@ -66,9 +66,9 @@ class App extends Component {
                     <MDBNavLink to="/dashboards">Tutorial</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
-                  <MDBNavItem>
                     <MDBNavLink to="/tutorial">Tutorial</MDBNavLink>
                   </MDBNavItem>
+                  <MDBNavItem>
                     <MDBNavLink to="/login">Log In</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
