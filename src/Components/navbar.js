@@ -29,7 +29,7 @@ class SottBigBalls extends React.Component {
         <header>
           <Router>
             <MDBNavbar color="bg-primary" fixed="top" dark expand="md" scrolling transparent>
-              <MDBNavbarBrand href="/">
+              <MDBNavbarBrand href="/TutorialPage">
                 <strong>Welcome!</strong>
               </MDBNavbarBrand>
               {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
