@@ -12,8 +12,8 @@ var moment = require('moment');
 
 const newTheme = createMuiTheme({
     overrides: {
-        MUIDataTableBodyCell: {
-        root:{ 
+        MUIDataTable: {
+        paper:{ 
             backgroundColor: "#3256a8",
         },
         responsiveScroll: {
