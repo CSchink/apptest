@@ -4,6 +4,7 @@ import JumbotronPage from './jumbotron';
 const { TextArea } = Input;
 const InputGroup = Input.Group;
 const { Option, OptGroup } = AutoComplete;
+import NormalNavBar from ',/normalnavbar'
 
   
 class InputPage extends React.Component {
@@ -47,7 +48,7 @@ class InputPage extends React.Component {
             "Thailand"
         ]
         const sourceData = [
-            "Sott.net",
+            "Wikipedia",
         ]
         const originatingData = [
             "United States",
@@ -61,7 +62,6 @@ class InputPage extends React.Component {
             "Capitalism",
             "Revolution",
             "Banking",
-            "Colonization",
             "Communism",
             "Christianity",
             "Coup D'etat",
@@ -91,7 +91,8 @@ class InputPage extends React.Component {
 
     return (
         <div>
-            <JumbotronPage text="History Database - Data Entry" color='#4287f5' />
+            <NormalNavBar />
+            <JumbotronPage text="History Database - Data Entry"/>
         <div style={{margin: "30px auto", 
             boxSizing: "border-box", 
             width: "600px", 

@@ -7,7 +7,7 @@ import {
     withStyles
   } from "@material-ui/core/styles";
   import '../App.css';
- 
+import NormalNavBar from ',/normalnavbar'
 var moment = require('moment');
 
 const newTheme = createMuiTheme({
@@ -148,6 +148,7 @@ class Table extends Component {
             
             return (
             <div>
+            <NormalNavBar />
             <MuiThemeProvider theme={newTheme}>
                 <MUIDataTable
                             columns={columns}

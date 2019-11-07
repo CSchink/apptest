@@ -29,13 +29,13 @@ class App extends Component {
     return (
     <Router>
     
-    <div>
+    {/* <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <Link to="/lab" className="navbar-brand">SOTT Lab</Link>
             <div className="collapse nav-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                  <Link to="/" className="nav-link">Login</Link>
+                  <Link to="/login" className="nav-link">Login</Link>
                 </li>
                 <li className="navbar-item">
                   <Link to="/input" className="nav-link">Input</Link>
@@ -48,13 +48,13 @@ class App extends Component {
                 </li>
               </ul>
             </div>
-          </nav>
+          </nav> */}
          
       <Route path ="/dashboards" component ={Dashboard} />
       <Route path="/input" component={InputPage} />
-      <Route path="/login" exact component ={LoginForm} />
-      <Route path="/lab" exact component ={Table} />
-      <Route path="/" component={TutorialPage} />
+      <Route path="/login" component ={LoginForm} />
+      <Route path="/lab"  component ={Table} />
+      <Route path="/" exact component={TutorialPage} />
     </div>
     </Router>
   );
