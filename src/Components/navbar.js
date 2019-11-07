@@ -6,7 +6,6 @@ import Table from './Components/Table';
 import InputPage from './Components/inputPage';
 import LoginForm from './Components/Login';
 import TutorialPage from './Components/tutorialPage';
-import SottBigBalls from './Components/navbar'
 
 class SottBigBalls extends React.Component {
   constructor(props) {
@@ -31,7 +30,7 @@ class SottBigBalls extends React.Component {
           <Router>
             <MDBNavbar color="bg-primary" fixed="top" dark expand="md" scrolling transparent>
               <MDBNavbarBrand href="/">
-                <strong>Navbar</strong>
+                <strong>Welcome!</strong>
               </MDBNavbarBrand>
               {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
               <MDBCollapse isOpen={this.state.collapse} navbar>
