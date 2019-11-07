@@ -7,6 +7,7 @@ import Table from './Components/Table';
 import InputPage from './Components/inputPage';
 import LoginForm from './Components/Login';
 import TutorialPage from './Components/tutorialPage';
+import SottBigBalls from './Components/navbar'
 
 class App extends Component {
   render() { 
@@ -21,7 +22,6 @@ class App extends Component {
                 <li className="navbar-item">
                   <Link to="/" className="nav-link">Login</Link>
                 </li>
-
                 <li className="navbar-item">
                   <Link to="/input" className="nav-link">Input</Link>
                 </li>
@@ -36,7 +36,8 @@ class App extends Component {
           </nav>
       <Route path ="/dashboards" component ={Dashboard} />
       <Route path="/input" component={InputPage} />
-      <Route path="/" exact component ={LoginForm} />
+      {/* <Route path="/" exact component ={LoginForm} /> */}
+      <Route path="/" exact component ={SottBigBalls} />
       <Route path="/lab" exact component ={Table} />
       <Route path="/tutorial" component={TutorialPage} />
     </div>
