@@ -8,7 +8,6 @@ import Table from './Components/Table';
 import InputPage from './Components/inputPage';
 import LoginForm from './Components/Login';
 import TutorialPage from './Components/tutorialPage';
-import SottBigBalls from './Components/navbar'
 
 class App extends Component {
   render() { 
@@ -52,7 +51,13 @@ class App extends Component {
                     <MDBNavLink to="/dashboards">Tutorial</MDBNavLink>
                   </MDBNavItem>
                   <MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="/tutorial">Tutorial</MDBNavLink>
+                  </MDBNavItem>
                     <MDBNavLink to="/login">Log In</MDBNavLink>
+                  </MDBNavItem>
+                  <MDBNavItem>
+                    <MDBNavLink to="/input">Input</MDBNavLink>
                   </MDBNavItem>
                 </MDBNavbarNav>
               </MDBCollapse>
@@ -72,7 +77,7 @@ class App extends Component {
         </main>
       <Route path ="/dashboards" component ={Dashboard} />
       <Route path="/input" component={InputPage} />
-      <Route path="/" exact component ={LoginForm} />
+      <Route path="/login" exact component ={LoginForm} />
       <Route path="/lab" exact component ={Table} />
       <Route path="/tutorial" component={TutorialPage} />
     </div>
