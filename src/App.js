@@ -15,7 +15,7 @@ class App extends Component {
     
     <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
-            <Link to="/lab" className="navbar-brand">Database</Link>
+            <Link to="/lab" className="navbar-brand">SOTT Lab</Link>
             <div className="collpase nav-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
@@ -29,7 +29,7 @@ class App extends Component {
                   <Link to="/tutorial" className="nav-link">Tutorial</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/dashboards" className="nav-link">Statistics</Link>
+                  <Link to="/dashboards" className="nav-link">Dashboard</Link>
                 </li>
               </ul>
             </div>

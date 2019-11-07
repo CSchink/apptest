@@ -50,6 +50,7 @@ class Table extends Component {
             rowsPerPage: 25,
             download: false,
             rowsPerPageOptions: [10,25,50,100],
+            fixedHeader: true,
     }
         var columns = [ 
             {
