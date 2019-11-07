@@ -10,6 +10,21 @@ import LoginForm from './Components/Login';
 import TutorialPage from './Components/tutorialPage';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapse: false,
+      isWideEnough: false
+    };
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick() {
+    this.setState({
+      collapse: !this.state.collapse
+    });
+  }
+  
   render() { 
     return (
     <Router>
