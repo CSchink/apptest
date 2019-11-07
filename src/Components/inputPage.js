@@ -1,10 +1,11 @@
 import React from 'react';
 import { Input, Button, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
 import JumbotronPage from './jumbotron';
+import NormalNavBar from './normalnavbar'
+
 const { TextArea } = Input;
 const InputGroup = Input.Group;
 const { Option, OptGroup } = AutoComplete;
-import NormalNavBar from './normalnavbar'
 
   
 class InputPage extends React.Component {
