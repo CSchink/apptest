@@ -39,7 +39,7 @@ class App extends Component {
       <Route path="/input" component={InputPage} />
       <Route path="/" component ={LoginForm} />
       <Route path="/lab"  component ={Table} />
-      <Route path="/tutorial" exact component={TutorialPage} />
+      <Route path="/tutorial" component={TutorialPage} />
     </div>
     </Router>
   );
