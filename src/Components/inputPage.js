@@ -1,7 +1,6 @@
 import React from 'react';
 import { Input, Button, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
 import JumbotronPage from './jumbotron';
-import NormalNavBar from './normalnavbar'
 
 const { TextArea } = Input;
 const InputGroup = Input.Group;
@@ -92,7 +91,6 @@ class InputPage extends React.Component {
 
     return (
         <div>
-            <NormalNavBar />
             <JumbotronPage text="History Database - Data Entry"/>
         <div style={{margin: "30px auto", 
             boxSizing: "border-box", 

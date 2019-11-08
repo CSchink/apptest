@@ -2,8 +2,6 @@ import React from 'react';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import JumbotronPage from './jumbotron';
 import axios from 'axios';
-import NormalNavBar from './normalnavbar'
-
 
 
 class Login extends React.Component {
@@ -48,7 +46,6 @@ class Login extends React.Component {
       const { getFieldDecorator } = this.props.form;
       return (
           <div>
-            <NormalNavBar />
             <JumbotronPage text="Database Login" />
           <div style={{  margin: "30px auto", boxSizing: "border-box", width: "500px", minHeight: "200px", alignItem: 'center', padding: "10px 20px"}}>
               <p>Please sign in below</p>
