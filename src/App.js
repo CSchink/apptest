@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import 'semantic-ui-css/semantic.min.css'
-import { Button, Menu } from 'semantic-ui-react'
+
 
 import Dashboard from './Components/dashboards';
 import Table from './Components/Table';
