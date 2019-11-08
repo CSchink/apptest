@@ -7,11 +7,12 @@ import {
     withStyles
   } from "@material-ui/core/styles";
   import '../App.css';
-
+ 
 var moment = require('moment');
 
 const newTheme = createMuiTheme({
     overrides: {
+      MUIDataTable: {
 
         responsiveScroll: {
         //   overflowX: 'none',
@@ -19,6 +20,7 @@ const newTheme = createMuiTheme({
           maxHeight: 'auto',
         },
       },
+    },
 })
 class Table extends Component {
 
@@ -48,7 +50,6 @@ class Table extends Component {
             rowsPerPage: 25,
             download: false,
             rowsPerPageOptions: [10,25,50,100],
-            fixedHeader: true,
     }
         var columns = [ 
             {
@@ -141,7 +142,7 @@ class Table extends Component {
             
             return (
             <div>
-                <MuiThemeProvider theme={newTheme}>
+            <MuiThemeProvider theme={newTheme}>
                 <MUIDataTable
                             columns={columns}
                             data={data}
