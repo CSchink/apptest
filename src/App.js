@@ -9,7 +9,6 @@ import LoginForm from './Components/Login';
 import TutorialPage from './Components/tutorialPage';
 
 class App extends Component {
-
   render() { 
     return (
     <Router>
@@ -17,11 +16,12 @@ class App extends Component {
     <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <Link to="/lab" className="navbar-brand">SOTT Lab</Link>
-            <div className="collapse nav-collapse">
+            <div className="collpase nav-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
                   <Link to="/" className="nav-link">Login</Link>
                 </li>
+
                 <li className="navbar-item">
                   <Link to="/input" className="nav-link">Input</Link>
                 </li>
@@ -34,11 +34,10 @@ class App extends Component {
               </ul>
             </div>
           </nav>
-         
       <Route path ="/dashboards" component ={Dashboard} />
       <Route path="/input" component={InputPage} />
-      <Route path="/" component ={LoginForm} />
-      <Route path="/lab"  component ={Table} />
+      <Route path="/" exact component ={LoginForm} />
+      <Route path="/lab" exact component ={Table} />
       <Route path="/tutorial" component={TutorialPage} />
     </div>
     </Router>
