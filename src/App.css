@@ -22,7 +22,7 @@ body {
   position: 'relative';
   left: 'auto';
   right: 'auto';
-  background-color: #adcae6;
+  background-color: #BEE2FF;
 }
 
 h2 {
@@ -33,6 +33,6 @@ h2 {
   margin: 30px;
   width: 100px;
   height: 100px;
-  background-color: #4287f5;
+  background-color: #BEE2FF;
   transform: rotate(0.8turn)
 }
