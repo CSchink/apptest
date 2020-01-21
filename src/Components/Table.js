@@ -124,7 +124,6 @@ class Table extends Component {
         ]
             
         var data=[]
-        console.log(this.state);
         this.state.historylab.forEach((item) => {
             var arr=[moment(item.Date).format('YYYY DD MMMM'),
                     item.Entry,

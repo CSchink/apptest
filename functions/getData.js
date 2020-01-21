@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 let conn = null;
 
-const dbUrl = 'mongodb+srv://dbCorey:MVDhmYhNQkp2y8T@cluster0-ymebw.mongodb.net/sottlab?retryWrites=true&w=majority'
+//if error .env contains Mongodb code
 
 exports.handler = function(event, context, callback) {
 

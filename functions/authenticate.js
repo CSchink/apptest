@@ -4,8 +4,7 @@ const cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const dbUrl = 'mongodb+srv://dbCorey:QCNrQNjjEncV8fT@cluster1-e2c8k.mongodb.net/logindata?retryWrites=true&w=majority'
-
+// if error.env contains mongodb code
 
 exports.handler = function(event, context, callback) {
 
